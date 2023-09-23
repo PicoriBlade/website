@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tsuki Farm</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="/images/Buttons/TsukiFarm.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <table class="bar">
+            <tr align="center">
+                <td>
+                    <a href="index.html" 
+                    title="Home" >
+                        <img src ="images/Buttons/Home.png"
+                        height="25"
+                        alt="home button"
+                        title="Home"> 
+                    </a>
+                </td>
+                <td></td>
+                <td>
+                    <a href="TsukiFarm.html" 
+                    title="TsukiFarm" >
+                        <img src ="images/Buttons/TsukiFarm.png"
+                        height="25"
+                        alt="Tsuki Farm button"
+                        title="Tsuki Farm"
+                        style="border-radius: 5px;"> 
+                    </a>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <a class="unfilled"
+                    href="index.html" 
+                    title="Home" >
+                        &nbspHome&nbsp
+                    </a>
+                </td>
+                <td></td>
+                <td>
+                    <a class="filled"
+                    href="TsukiFarm.html" 
+                    title="TsukiFarm" >
+                        &nbspTsuki&nbsp
+                    </a>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <br>
+
+        <div id="farmPlotBox">
+            <div id="IMADETHIS">MADE BY SYLVIE <br>@syiv on Discord</div>
+            <div id="instructions">
+                Instructions:<br>
+                &nbsp&nbspChoose a plot and direction with the 2 dropdowns and hit the "submit" button to lock it in<br>
+                &nbsp&nbspThen, to place the plot, click the spot on the farm grid where you want it to be<br>
+                &nbsp&nbspTo delete a plot, choose "Empty Plot" from the plot list<br>
+                &nbsp&nbspTo restart the whole farm, click the "Reset Farm" button
+            </div>
+            <label id="farmPlotlabel">Plot: </label>
+            <select name="farmPlots" id="farmPlotSelect">
+                <option value="0">Empty Plot</option>
+                <option value="1">Sprinkler</option>
+                <option value="8">Lane Sprinkler</option>
+                <option value="2">MegaGrow</option>
+                <option value="3">GigaGrow</option>
+                <option value="4">Goat Fert</option>
+                <option value="5">Bull Fert</option>
+                <option value="6">Elephant Fert</option>
+                <option value="7">Plant/Flower</option>
+                <option value="20">Carrot</option>
+                <option value="21">Grape</option>
+                <option value="22">Gloamroot</option>
+                <option value="23">Strawberry</option>
+                <option value="24">Turnip</option>
+                <option value="25">Potato</option>
+                <option value="26">Onion</option>
+                <option value="27">Pumpkin</option>
+                <option value="28">Melon</option>
+            </select>
+            <label id="farmPlotDirectionlabel">Direction: </label>
+            <select name="farmPlotDirection" id="farmPlotDirectionSelect">
+                <option value="0">Up</option>
+                <option value="1">Right</option>
+                <option value="2">Down</option>
+                <option value="3">Left</option>
+            </select>
+            <button id="farmPlotButton" type="button">submit</button>
+            <br>
+
+            <table id="plotCounterBox">
+                <tr>
+                    <td class="counterBox">
+                        <img class="counterBox" src="/images/farmPlots/Sprinkler.png">
+                    </td>
+                    <td id="sprinklerCounter" class="counterBox">
+                        0
+                    </td>
+                    <td class="counterBox">
+                        <img class="counterBox" src="/images/farmPlots/LaneSprinkler.png">
+                    </td>
+                    <td id="laneSprinklerCounter" class="counterBox">
+                        0
+                    </td>
+                    <td class="counterBox">
+                        <img class="counterBox" src="/images/farmPlots/MegaGrow.png">
+                    </td>
+                    <td id="megauvCounter" class="counterBox">
+                        0
+                    </td>
+                    <td class="counterBox">
+                        <img class="counterBox" src="/images/farmPlots/GigaGrow.png">
+                    </td>
+                    <td id="gigauvCounter" class="counterBox">
+                        0
+                    </td>
+                    <td class="counterBox">
+                        <img class="counterBox" src="/images/farmPlots/GoatFert.png">
+                    </td>
+                    <td id="goatFertCounter" class="counterBox">
+                        0
+                    </td>
+                    <td class="counterBox">
+                        <img class="counterBox" src="/images/farmPlots/BullFert.png">
+                    </td>
+                    <td id="bullFertCounter" class="counterBox">
+                        0
+                    </td>
+                    <td class="counterBox">
+                        <img class="counterBox" src="/images/farmPlots/ElephantFert.png">
+                    </td>
+                    <td id="elephantFertCounter" class="counterBox">
+                        0
+                    </td>
+                    <td class="counterBox">
+                        <img class="counterBox" src="/images/farmPlots/Plant.png">
+                    </td>
+                    <td id="plantCounter" class="counterBox">
+                        0
+                    </td>
+                    <td class="counterBox">
+                        <img class="counterBox" src="/images/farmPlots/Carrot.png">
+                    </td>
+                    <td id="cropCounter" class="counterBox">
+                        0
+                    </td>
+                </tr>
+            </table>
+
+            <label id="playerProfitlabel">Profit:</label>
+            <label id="playerProfitScore">MIN: 0 MAX: 0</label>
+        </div>
+
+        <div id="1">
+
+        </div>
+
+        <div id="Farm">
+            <button id="resetFarmButton" type="button">Reset Farm</button>
+            <table id="groupA">
+                <tr>
+                    <td><div id="plotA0,0" class="plot"></div></td>
+                    <td><div id="plotA0,1" class="plot"></div></td>
+                    <td><div id="plotA0,2" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotA1,0" class="plot"></div></td>
+                    <td><div id="plotA1,1" class="plot"></div></td>
+                    <td><div id="plotA1,2" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotA2,0" class="plot"></div></td>
+                    <td><div id="plotA2,1" class="plot"></div></td>
+                    <td><div id="plotA2,2" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotA3,0" class="plot"></div></td>
+                    <td><div id="plotA3,1" class="plot"></div></td>
+                    <td><div id="plotA3,2" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotA4,0" class="plot"></div></td>
+                    <td><div id="plotA4,1" class="plot"></div></td>
+                    <td><div id="plotA4,2" class="plot"></div></td>
+                </tr>
+            </table>
+            <table id="groupB">
+                <tr>
+                    <td><div id="plotB0,0" class="plot"></div></td>
+                    <td><div id="plotB0,1" class="plot"></div></td>
+                    <td><div id="plotB0,2" class="plot"></div></td>
+                    <td><div id="plotB0,3" class="plot"></div></td>
+                    <td><div id="plotB0,4" class="plot"></div></td>
+                    <td><div id="plotB0,5" class="plot"></div></td>
+                    <td><div id="plotB0,6" class="plot"></div></td>
+                    <td><div id="plotB0,7" class="plot"></div></td>
+                    <td><div id="plotB0,8" class="plot"></div></td>
+                    <td><div id="plotB0,9" class="plot"></div></td>
+                    <td><div id="plotB0,10" class="plot"></div></td>
+                    <td><div id="plotB0,11" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotB1,0" class="plot"></div></td>
+                    <td><div id="plotB1,1" class="plot"></div></td>
+                    <td><div id="plotB1,2" class="plot"></div></td>
+                    <td><div id="plotB1,3" class="plot"></div></td>
+                    <td><div id="plotB1,4" class="plot"></div></td>
+                    <td><div id="plotB1,5" class="plot"></div></td>
+                    <td><div id="plotB1,6" class="plot"></div></td>
+                    <td><div id="plotB1,7" class="plot"></div></td>
+                    <td><div id="plotB1,8" class="plot"></div></td>
+                    <td><div id="plotB1,9" class="plot"></div></td>
+                    <td><div id="plotB1,10" class="plot"></div></td>
+                    <td><div id="plotB1,11" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotB2,0" class="plot"></div></td>
+                    <td><div id="plotB2,1" class="plot"></div></td>
+                    <td><div id="plotB2,2" class="plot"></div></td>
+                    <td><div id="plotB2,3" class="plot"></div></td>
+                    <td><div id="plotB2,4" class="plot"></div></td>
+                    <td><div id="plotB2,5" class="plot"></div></td>
+                    <td><div id="plotB2,6" class="plot"></div></td>
+                    <td><div id="plotB2,7" class="plot"></div></td>
+                    <td><div id="plotB2,8" class="plot"></div></td>
+                    <td><div id="plotB2,9" class="plot"></div></td>
+                    <td><div id="plotB2,10" class="plot"></div></td>
+                    <td><div id="plotB2,11" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotB3,0" class="plot"></div></td>
+                    <td><div id="plotB3,1" class="plot"></div></td>
+                    <td><div id="plotB3,2" class="plot"></div></td>
+                    <td><div id="plotB3,3" class="plot"></div></td>
+                    <td><div id="plotB3,4" class="plot"></div></td>
+                    <td><div id="plotB3,5" class="plot"></div></td>
+                    <td><div id="plotB3,6" class="plot"></div></td>
+                    <td><div id="plotB3,7" class="plot"></div></td>
+                    <td><div id="plotB3,8" class="plot"></div></td>
+                    <td><div id="plotB3,9" class="plot"></div></td>
+                    <td><div id="plotB3,10" class="plot"></div></td>
+                    <td><div id="plotB3,11" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotB4,0" class="plot"></div></td>
+                    <td><div id="plotB4,1" class="plot"></div></td>
+                    <td><div id="plotB4,2" class="plot"></div></td>
+                    <td><div id="plotB4,3" class="plot"></div></td>
+                    <td><div id="plotB4,4" class="plot"></div></td>
+                    <td><div id="plotB4,5" class="plot"></div></td>
+                    <td><div id="plotB4,6" class="plot"></div></td>
+                    <td><div id="plotB4,7" class="plot"></div></td>
+                    <td><div id="plotB4,8" class="plot"></div></td>
+                    <td><div id="plotB4,9" class="plot"></div></td>
+                    <td><div id="plotB4,10" class="plot"></div></td>
+                    <td><div id="plotB4,11" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotB5,0" class="plot"></div></td>
+                    <td><div id="plotB5,1" class="plot"></div></td>
+                    <td><div id="plotB5,2" class="plot"></div></td>
+                    <td><div id="plotB5,3" class="plot"></div></td>
+                    <td><div id="plotB5,4" class="plot"></div></td>
+                    <td><div id="plotB5,5" class="plot"></div></td>
+                    <td><div id="plotB5,6" class="plot"></div></td>
+                    <td><div id="plotB5,7" class="plot"></div></td>
+                    <td><div id="plotB5,8" class="plot"></div></td>
+                    <td><div id="plotB5,9" class="plot"></div></td>
+                    <td><div id="plotB5,10" class="plot"></div></td>
+                    <td><div id="plotB5,11" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotB6,0" class="plot"></div></td>
+                    <td><div id="plotB6,1" class="plot"></div></td>
+                    <td><div id="plotB6,2" class="plot"></div></td>
+                    <td><div id="plotB6,3" class="plot"></div></td>
+                    <td><div id="plotB6,4" class="plot"></div></td>
+                    <td><div id="plotB6,5" class="plot"></div></td>
+                    <td><div id="plotB6,6" class="plot"></div></td>
+                    <td><div id="plotB6,7" class="plot"></div></td>
+                    <td><div id="plotB6,8" class="plot"></div></td>
+                    <td><div id="plotB6,9" class="plot"></div></td>
+                    <td><div id="plotB6,10" class="plot"></div></td>
+                    <td><div id="plotB6,11" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotB7,0" class="plot"></div></td>
+                    <td><div id="plotB7,1" class="plot"></div></td>
+                    <td><div id="plotB7,2" class="plot"></div></td>
+                    <td><div id="plotB7,3" class="plot"></div></td>
+                    <td><div id="plotB7,4" class="plot"></div></td>
+                    <td><div id="plotB7,5" class="plot"></div></td>
+                    <td><div id="plotB7,6" class="plot"></div></td>
+                    <td><div id="plotB7,7" class="plot"></div></td>
+                    <td><div id="plotB7,8" class="plot"></div></td>
+                    <td><div id="plotB7,9" class="plot"></div></td>
+                    <td><div id="plotB7,10" class="plot"></div></td>
+                    <td><div id="plotB7,11" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotB8,0" class="plot"></div></td>
+                    <td><div id="plotB8,1" class="plot"></div></td>
+                    <td><div id="plotB8,2" class="plot"></div></td>
+                    <td><div id="plotB8,3" class="plot"></div></td>
+                    <td><div id="plotB8,4" class="plot"></div></td>
+                    <td><div id="plotB8,5" class="plot"></div></td>
+                    <td><div id="plotB8,6" class="plot"></div></td>
+                    <td><div id="plotB8,7" class="plot"></div></td>
+                    <td><div id="plotB8,8" class="plot"></div></td>
+                    <td><div id="plotB8,9" class="plot"></div></td>
+                    <td><div id="plotB8,10" class="plot"></div></td>
+                    <td><div id="plotB8,11" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotB9,0" class="plot"></div></td>
+                    <td><div id="plotB9,1" class="plot"></div></td>
+                    <td><div id="plotB9,2" class="plot"></div></td>
+                    <td><div id="plotB9,3" class="plot"></div></td>
+                    <td><div id="plotB9,4" class="plot"></div></td>
+                    <td><div id="plotB9,5" class="plot"></div></td>
+                    <td><div id="plotB9,6" class="plot"></div></td>
+                    <td><div id="plotB9,7" class="plot"></div></td>
+                    <td><div id="plotB9,8" class="plot"></div></td>
+                    <td><div id="plotB9,9" class="plot"></div></td>
+                    <td><div id="plotB9,10" class="plot"></div></td>
+                    <td><div id="plotB9,11" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotB10,0" class="plot"></div></td>
+                    <td><div id="plotB10,1" class="plot"></div></td>
+                    <td><div id="plotB10,2" class="plot"></div></td>
+                    <td><div id="plotB10,3" class="plot"></div></td>
+                    <td><div id="plotB10,4" class="plot"></div></td>
+                    <td><div id="plotB10,5" class="plot"></div></td>
+                    <td><div id="plotB10,6" class="plot"></div></td>
+                    <td><div id="plotB10,7" class="plot"></div></td>
+                    <td><div id="plotB10,8" class="plot"></div></td>
+                    <td><div id="plotB10,9" class="plot"></div></td>
+                    <td><div id="plotB10,10" class="plot"></div></td>
+                    <td><div id="plotB10,11" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotB11,0" class="plot"></div></td>
+                    <td><div id="plotB11,1" class="plot"></div></td>
+                    <td><div id="plotB11,2" class="plot"></div></td>
+                    <td><div id="plotB11,3" class="plot"></div></td>
+                    <td><div id="plotB11,4" class="plot"></div></td>
+                    <td><div id="plotB11,5" class="plot"></div></td>
+                    <td><div id="plotB11,6" class="plot"></div></td>
+                    <td><div id="plotB11,7" class="plot"></div></td>
+                    <td><div id="plotB11,8" class="plot"></div></td>
+                    <td><div id="plotB11,9" class="plot"></div></td>
+                    <td><div id="plotB11,10" class="plot"></div></td>
+                    <td><div id="plotB11,11" class="plot"></div></td>
+                </tr>
+            </table>
+            <table id="groupC">
+                <tr>
+                    <td><div id="plotC0,0" class="plot"></div></td>
+                    <td><div id="plotC0,1" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotC1,0" class="plot"></div></td>
+                    <td><div id="plotC1,1" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotC2,0" class="plot"></div></td>
+                    <td><div id="plotC2,1" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotC3,0" class="plot"></div></td>
+                    <td><div id="plotC3,1" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotC4,0" class="plot"></div></td>
+                    <td><div id="plotC4,1" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotC5,0" class="plot"></div></td>
+                    <td><div id="plotC5,1" class="plot"></div></td>
+                </tr>
+            </table>
+            <table id="groupD">
+                <tr>
+                    <td><div id="plotD0,0" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotD1,0" class="plot"></div></td>
+                </tr>
+            </table>
+            <table id="groupE">
+                <tr>
+                    <td><div id="plotE0,0" class="plot"></div></td>
+                    <td><div id="plotE0,1" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotE1,0" class="plot"></div></td>
+                    <td><div id="plotE1,1" class="plot"></div></td>
+                </tr>
+            </table>
+            <table id="groupF">
+                <tr>
+                    <td><div id="plotF0,0" class="plot"></div></td>
+                    <td><div id="plotF0,1" class="plot"></div></td>
+                    <td><div id="plotF0,2" class="plot"></div></td>
+                    <td><div id="plotF0,3" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotF1,0" class="plot"></div></td>
+                    <td><div id="plotF1,1" class="plot"></div></td>
+                    <td><div id="plotF1,2" class="plot"></div></td>
+                    <td><div id="plotF1,3" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotF2,0" class="plot"></div></td>
+                    <td><div id="plotF2,1" class="plot"></div></td>
+                    <td><div id="plotF2,2" class="plot"></div></td>
+                    <td><div id="plotF2,3" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotF3,0" class="plot"></div></td>
+                    <td><div id="plotF3,1" class="plot"></div></td>
+                    <td><div id="plotF3,2" class="plot"></div></td>
+                    <td><div id="plotF3,3" class="plot"></div></td>
+                </tr>
+            </table>
+        </div>
+
+        <script src="TsukiFarm.js"></script>
+    </body>
+</html>
+
+<!--
+Testing out stuff
+
+
+            <br>
+
+            <label id="playerChecklabel">How often do you check your farm? (in hours):</label>
+            <input id="playerCheckInput" type="number">
+            <button id="playerCheckButton" type="button">submit</button>
+
+
+        <button id="farmPlotRemove" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Remove.png"></button>
+            <button id="farmPlotHoe" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Hoe.png"></button>
+            <button id="farmPlotSprinkler" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Sprinkler.png"></button>
+            <button id="farmPlotMegaGrow" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/MegaGrow.png"></button>
+            <button id="farmPlotGigaGrow" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/GigaGrow.png"></button>
+            <button id="farmPlotGoatFert" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/GoatFert.png"></button>
+            <button id="farmPlotBullFert" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/BullFert.png"></button>
+            <button id="farmPlotElephantFert" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/ElephantFert.png"></button>
+            <br>
+            <button id="farmPlotCarrot" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Carrot.png"></button>
+            <button id="farmPlotGrape" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Grape.png"></button>
+            <button id="farmPlotGloamroot" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Gloamroot.png"></button>
+            <button id="farmPlotStrawberry" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Strawberry.png"></button>
+            <button id="farmPlotTurnip" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Turnip.png"></button>
+            <button id="farmPlotPotato" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Potato.png"></button>
+            <button id="farmPlotOnion" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Onion.png"></button>
+            <button id="farmPlotPumpkin" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Pumpkin.png"></button>
+            <button id="farmPlotMelon" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Melon.png"></button>
+
+        <audio controls autoplay muted loop src="/music/ACNH 5am.mp3"></audio>
+
+        <iframe style="border: 0;" 
+        src="https://docs.google.com/spreadsheets/d/1_iIXA2UDMTtcc3vhpwaQfG5mwhXibArKYHdmygSAhEI/edit?pli=1#gid=0"
+        width="700"
+        height="700"></iframe>
+        <br>
+        <br>
+        <a href="https://docs.google.com/spreadsheets/d/1_iIXA2UDMTtcc3vhpwaQfG5mwhXibArKYHdmygSAhEI/edit?pli=1#gid=0" 
+        target="_blank" 
+        title="yoooo i popped off on this one">
+            <img src ="images/ashCool.png"
+            height="100"
+            alt="ash Cool emote"
+            title="ashCool.png"> 
+        </a>
+-->
