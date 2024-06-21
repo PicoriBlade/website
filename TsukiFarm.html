@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tsuki Farm</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="/images/Buttons/TsukiFarm.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <table class="bar">
+            <tr align="center" id = "barRow">
+                <td id = "barBox">
+                    <a href="index.html" id = "barBox"
+                        title="Home" >
+                            <img src ="images/Buttons/Home.png"
+                            class= "homeButton" 
+                            alt="home button"
+                            title="Home"> 
+                    </a>
+                </td id = "barBox">
+                <td id = "barBox"></td>
+                <td id = "barBox">
+                    <a href="TsukiFarm.html" id = "barBox"
+                        title="TsukiFarm" >
+                            <img src ="images/Buttons/TsukiFarm.png"
+                            class= "homeButton" 
+                            alt="Tsuki Farm button"
+                            title="Tsuki Farm"
+                            style="border-radius: 5px;"> 
+                    </a>
+                </td>
+            </tr>
+            <tr align="center" id = "barRow">
+                <td class= "homeButton" id = "barBox">
+                    <a class="unfilled" id = "barBox"
+                        href="index.html" 
+                        title="Home" >
+                            &nbspHome&nbsp
+                    </a>
+                </td>
+                <td id = "barBox"></td>
+                <td class= "homeButton" id = "barBox">
+                    <a class="filled" id = "barBox"
+                        href="TsukiFarm.html" 
+                        title="TsukiFarm" >
+                            &nbspTsuki&nbsp
+                    </a>
+                </td>
+            </tr>
+        </table>
+        <hr>
+
+        <div id="farmPlotBox">
+            <div id="IMADETHIS">MADE BY SYLVIE <br>@syiv on Discord</div>
+            <div id="instructions">
+                Instructions:<br>
+                &nbsp&nbspChoose a plot and direction with the 2 dropdowns and hit the "submit" button to lock it in<br>
+                &nbsp&nbspThen, to place the plot, click the spot on the farm grid where you want it to be<br>
+                &nbsp&nbspTo clear a plot, choose "Clear" from the plot list<br>
+                &nbsp&nbspTo restart the whole farm, click the "Reset Farm" button
+            </div>
+            <label id="farmPlotlabel">Plot: </label>
+            <select name="farmPlots" id="farmPlotSelect">
+                <option value="0">Clear</option>
+                <option value="12">Empty Plot</option>
+                <option value="1">Sprinkler</option>
+                <option value="8">Lane Sprinkler</option>
+                <option value="2">MegaGrow</option>
+                <option value="3">GigaGrow</option>
+                <option value="4">Goat Fert</option>
+                <option value="5">Bull Fert</option>
+                <option value="6">Elephant Fert</option>
+                <option value="7">Plant/Flower</option>
+                <option value="9">4&nbsp&nbsp&nbspLeaf Clover</option>
+                <option value="10">16 Leaf Clover</option>
+                <option value="11">64 Leaf Clover</option>
+                <option value="13">Carrot</option>
+                <option value="14">Grape</option>
+                <option value="15">Gloamroot</option>
+                <option value="16">Strawberry</option>
+                <option value="17">Turnip</option>
+                <option value="18">Potato</option>
+                <option value="19">Onion</option>
+                <option value="20">Pumpkin</option>
+                <option value="21">Melon</option>
+            </select>
+            <label id="farmPlotDirectionlabel">Direction: </label>
+            <select name="farmPlotDirection" id="farmPlotDirectionSelect">
+                <option value="0">Up</option>
+                <option value="1">Right</option>
+                <option value="2">Down</option>
+                <option value="3">Left</option>
+            </select>
+            <button id="farmPlotButton" type="button">submit</button>
+            <br>
+
+            <label class="switch">
+                <input type="checkbox" id="fertSelect">
+                <span class="slider round"></span>
+            </label>
+            <label id="fertcosttogglelabel"> Incorporate Fert Cost? </label>
+            <br>
+
+            <label class="switch">
+                <input type="checkbox" id="strangeSelect">
+                <span class="slider round"></span>
+            </label>
+            <label id="strangeCostTogglelabel"> Include Strange Rate in Profit? </label>
+            <br>
+
+            <label class="switch">
+                <input type="checkbox" id="cropListSelect">
+                <span class="slider round"></span>
+            </label>
+            <label id="cropListtogglelabel"> Count Each Crop Individually? </label>
+            <br>
+
+            <table id="plotCounterBox">
+                <tr>
+                    <td class="counterBox">
+                        <img class="counterBoximg" src="/images/farmPlots/Crops.png">
+                    </td>
+                    <td id="cropCounter" class="counterBox">
+                        0
+                    </td>
+                    <td class="counterBox">
+                        <img class="counterBoximg" src="/images/farmPlots/Sprinkler.png">
+                    </td>
+                    <td id="sprinklerCounter" class="counterBox">
+                        0
+                    </td>
+                    <td class="counterBox">
+                        <img class="counterBoximg" src="/images/farmPlots/LaneSprinkler.png">
+                    </td>
+                    <td id="laneSprinklerCounter" class="counterBox">
+                        0
+                    </td>
+                    <td class="counterBox">
+                        <img class="counterBoximg" src="/images/farmPlots/MegaGrow.png">
+                    </td>
+                    <td id="megauvCounter" class="counterBox">
+                        0
+                    </td>
+                    <td class="counterBox">
+                        <img class="counterBoximg" src="/images/farmPlots/GigaGrow.png">
+                    </td>
+                    <td id="gigauvCounter" class="counterBox">
+                        0
+                    </td>
+                    <td class="counterBox">
+                        <img class="counterBoximg" src="/images/farmPlots/GoatFert.png">
+                    </td>
+                    <td id="goatFertCounter" class="counterBox">
+                        0
+                    </td>
+                    <td class="counterBox">
+                        <img class="counterBoximg" src="/images/farmPlots/BullFert.png">
+                    </td>
+                    <td id="bullFertCounter" class="counterBox">
+                        0
+                    </td>
+                    <td class="counterBox">
+                        <img class="counterBoximg" src="/images/farmPlots/ElephantFert.png">
+                    </td>
+                    <td id="elephantFertCounter" class="counterBox">
+                        0
+                    </td>
+                    <td class="counterBox">
+                        <img class="counterBoximg" src="/images/farmPlots/Plant.png">
+                    </td>
+                    <td id="plantCounter" class="counterBox">
+                        0
+                    </td>
+                    <td id="gcc4Leaf">
+
+                    </td>
+                    <td id="4leafcloverCounter" class="counterBox">
+                        0
+                    </td>
+                    <td id="gcc16Leaf">
+
+                    </td>
+                    <td id="16leafcloverCounter" class="counterBox">
+                        0
+                    </td>
+                    <td id="gcc64Leaf">
+
+                    </td>
+                    <td id="64leafcloverCounter" class="counterBox">
+                        0
+                    </td>
+                </tr>
+                <tr>
+                    <td class="counterBox2" style="display: none">
+                        <img class="counterBox2img" style="display: none" src="/images/farmPlots/Farm.png">
+                    </td>
+                    <td id="plotCounter" class="counterBox2" style="display: none">
+                        0
+                    </td>
+                    <td class="counterBox2" style="display: none">
+                        <img class="counterBox2img" style="display: none" src="/images/farmPlots/Carrot.png">
+                    </td>
+                    <td id="CarrotCounter" class="counterBox2" style="display: none">
+                        0
+                    </td>
+                    <td class="counterBox2" style="display: none">
+                        <img class="counterBox2img" style="display: none" src="/images/farmPlots/Grape.png">
+                    </td>
+                    <td id="GrapeCounter" class="counterBox2" style="display: none">
+                        0
+                    </td>
+                    <td class="counterBox2" style="display: none">
+                        <img class="counterBox2img" style="display: none" src="/images/farmPlots/Gloamroot.png">
+                    </td>
+                    <td id="GloamrootCounter" class="counterBox2" style="display: none">
+                        0
+                    </td>
+                    <td class="counterBox2" style="display: none">
+                        <img class="counterBox2img" style="display: none" src="/images/farmPlots/Strawberry.png">
+                    </td>
+                    <td id="StrawberryCounter" class="counterBox2" style="display: none">
+                        0
+                    </td>
+                    <td class="counterBox2" style="display: none">
+                        <img class="counterBox2img" style="display: none" src="/images/farmPlots/Turnip.png">
+                    </td>
+                    <td id="TurnipCounter" class="counterBox2" style="display: none">
+                        0
+                    </td>
+                    <td class="counterBox2" style="display: none">
+                        <img class="counterBox2img" style="display: none" src="/images/farmPlots/Potato.png">
+                    </td>
+                    <td id="PotatoCounter" class="counterBox2" style="display: none">
+                        0
+                    </td>
+                    <td class="counterBox2" style="display: none">
+                        <img class="counterBox2img" style="display: none" src="/images/farmPlots/Onion.png">
+                    </td>
+                    <td id="OnionCounter" class="counterBox2" style="display: none">
+                        0
+                    </td>
+                    <td class="counterBox2" style="display: none">
+                        <img class="counterBox2img" style="display: none" src="/images/farmPlots/Pumpkin.png">
+                    </td>
+                    <td id="PumpkinCounter" class="counterBox2" style="display: none">
+                        0
+                    </td>
+                    <td class="counterBox2" style="display: none">
+                        <img class="counterBox2img" style="display: none" src="/images/farmPlots/Melon.png">
+                    </td>
+                    <td id="MelonCounter" class="counterBox2" style="display: none">
+                        0
+                    </td>
+                </tr>
+            </table>
+
+            <label id="playerProfitlabel">Hourly Profit:</label>
+            <label id="playerProfitScore">[MIN: 0] [MAX: 0]</label>
+            <br>
+            
+            <label id="playerStrangeRatelabel">Strange Rate:</label>
+            <label id="playerStrangerateScore">0.15%</label>
+            <br>
+
+            <label id="playerCloverTimelabel">Clover Time:</label>
+            <label id="playerCloverTimeScore">100%</label>
+        </div>
+
+        <div id="1">
+
+        </div>
+
+        <div id="CloverFarm" style="display: none">
+            <button id="resetFarmButton" type="button">Reset Farm</button>
+            <img id="compass" src="/images/farmPlots/GoldCompass.png">
+            <table id="gccGroupA">
+                <tr>
+                    <td><div id="gccPlotA0,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA0,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA0,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA0,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA0,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA0,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA0,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA0,7" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotA1,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA1,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA1,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA1,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA1,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA1,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA1,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA1,7" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotA2,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA2,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA2,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA2,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA2,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA2,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA2,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA2,7" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotA3,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA3,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA3,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA3,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA3,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA3,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA3,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA3,7" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotA4,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA4,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA4,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA4,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA4,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA4,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA4,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA4,7" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotA5,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA5,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA5,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA5,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA5,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA5,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA5,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA5,7" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotA6,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA6,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA6,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA6,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA6,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA6,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA6,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA6,7" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotA7,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA7,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA7,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA7,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA7,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA7,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA7,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA7,7" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotA8,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA8,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA8,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA8,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA8,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA8,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA8,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA8,7" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotA9,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA9,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA9,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA9,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA9,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA9,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA9,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA9,7" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotA10,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA10,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA10,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA10,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA10,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA10,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA10,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA10,7" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotA11,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA11,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA11,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA11,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA11,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA11,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA11,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA11,7" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotA12,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA12,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA12,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA12,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA12,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA12,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA12,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotA12,7" class="gccPlot"></div></td>
+                </tr>
+            </table>
+            <table id="gccGroupB">
+                <tr>
+                    <td><div id="gccPlotB0,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB0,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB0,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB0,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB0,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB0,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB0,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB0,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB0,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB0,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB0,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB0,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB0,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB0,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB0,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB0,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB0,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB0,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB0,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB0,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB0,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB0,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB0,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB0,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB0,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB0,25" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotB1,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB1,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB1,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB1,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB1,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB1,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB1,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB1,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB1,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB1,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB1,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB1,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB1,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB1,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB1,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB1,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB1,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB1,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB1,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB1,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB1,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB1,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB1,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB1,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB1,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB1,25" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotB2,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB2,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB2,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB2,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB2,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB2,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB2,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB2,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB2,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB2,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB2,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB2,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB2,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB2,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB2,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB2,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB2,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB2,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB2,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB2,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB2,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB2,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB2,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB2,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB2,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB2,25" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotB3,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB3,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB3,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB3,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB3,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB3,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB3,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB3,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB3,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB3,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB3,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB3,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB3,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB3,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB3,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB3,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB3,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB3,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB3,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB3,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB3,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB3,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB3,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB3,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB3,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB3,25" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotB4,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB4,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB4,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB4,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB4,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB4,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB4,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB4,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB4,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB4,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB4,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB4,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB4,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB4,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB4,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB4,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB4,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB4,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB4,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB4,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB4,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB4,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB4,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB4,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB4,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB4,25" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotB5,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB5,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB5,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB5,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB5,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB5,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB5,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB5,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB5,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB5,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB5,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB5,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB5,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB5,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB5,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB5,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB5,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB5,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB5,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB5,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB5,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB5,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB5,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB5,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB5,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB5,25" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotB6,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB6,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB6,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB6,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB6,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB6,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB6,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB6,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB6,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB6,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB6,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB6,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB6,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB6,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB6,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB6,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB6,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB6,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB6,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB6,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB6,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB6,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB6,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB6,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB6,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB6,25" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotB7,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB7,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB7,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB7,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB7,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB7,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB7,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB7,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB7,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB7,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB7,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB7,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB7,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB7,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB7,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB7,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB7,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB7,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB7,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB7,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB7,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB7,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB7,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB7,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB7,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB7,25" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotB8,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB8,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB8,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB8,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB8,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB8,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB8,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB8,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB8,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB8,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB8,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB8,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB8,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB8,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB8,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB8,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB8,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB8,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB8,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB8,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB8,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB8,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB8,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB8,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB8,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB8,25" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotB9,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB9,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB9,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB9,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB9,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB9,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB9,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB9,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB9,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB9,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB9,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB9,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB9,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB9,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB9,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB9,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB9,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB9,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB9,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB9,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB9,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB9,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB9,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB9,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB9,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB9,25" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotB10,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB10,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB10,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB10,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB10,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB10,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB10,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB10,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB10,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB10,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB10,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB10,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB10,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB10,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB10,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB10,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB10,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB10,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB10,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB10,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB10,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB10,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB10,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB10,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB10,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB10,25" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotB11,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB11,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB11,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB11,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB11,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB11,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB11,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB11,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB11,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB11,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB11,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB11,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB11,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB11,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB11,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB11,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB11,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB11,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB11,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB11,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB11,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB11,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB11,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB11,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB11,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB11,25" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotB12,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB12,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB12,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB12,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB12,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB12,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB12,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB12,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB12,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB12,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB12,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB12,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB12,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB12,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB12,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB12,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB12,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB12,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB12,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB12,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB12,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB12,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB12,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB12,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB12,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB12,25" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotB13,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB13,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB13,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB13,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB13,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB13,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB13,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB13,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB13,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB13,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB13,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB13,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB13,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB13,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB13,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB13,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB13,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB13,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB13,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB13,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB13,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB13,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB13,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB13,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB13,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB13,25" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotB14,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB14,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB14,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB14,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB14,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB14,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB14,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB14,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB14,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB14,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB14,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB14,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB14,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB14,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB14,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB14,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB14,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB14,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB14,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB14,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB14,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB14,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB14,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB14,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB14,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB14,25" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotB15,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB15,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB15,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB15,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB15,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB15,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB15,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB15,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB15,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB15,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB15,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB15,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB15,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB15,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB15,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB15,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB15,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB15,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB15,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB15,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB15,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB15,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB15,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB15,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB15,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB15,25" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotB16,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB16,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB16,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB16,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB16,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB16,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB16,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB16,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB16,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB16,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB16,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB16,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB16,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB16,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB16,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB16,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB16,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB16,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB16,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB16,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB16,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB16,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB16,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB16,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB16,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB16,25" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotB17,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB17,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB17,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB17,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB17,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB17,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB17,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB17,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB17,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB17,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB17,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB17,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB17,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB17,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB17,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB17,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB17,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB17,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB17,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB17,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB17,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB17,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB17,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB17,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB17,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB17,25" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotB18,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB18,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB18,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB18,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB18,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB18,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB18,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB18,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB18,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB18,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB18,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB18,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB18,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB18,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB18,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB18,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB18,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB18,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB18,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB18,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB18,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB18,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB18,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB18,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB18,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB18,25" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotB19,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB19,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB19,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB19,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB19,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB19,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB19,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB19,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB19,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB19,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB19,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB19,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB19,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB19,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB19,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB19,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB19,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB19,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB19,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB19,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB19,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB19,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB19,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB19,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB19,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB19,25" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotB20,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB20,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB20,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB20,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB20,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB20,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB20,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB20,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB20,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB20,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB20,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB20,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB20,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB20,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB20,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB20,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB20,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB20,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB20,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB20,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB20,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB20,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB20,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB20,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB20,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB20,25" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotB21,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB21,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB21,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB21,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB21,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB21,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB21,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB21,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB21,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB21,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB21,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB21,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB21,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB21,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB21,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB21,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB21,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB21,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB21,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB21,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB21,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB21,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB21,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB21,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB21,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB21,25" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotB22,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB22,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB22,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB22,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB22,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB22,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB22,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB22,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB22,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB22,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB22,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB22,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB22,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB22,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB22,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB22,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB22,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB22,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB22,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB22,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB22,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB22,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB22,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB22,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB22,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB22,25" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotB23,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB23,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB23,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB23,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB23,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB23,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB23,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB23,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB23,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB23,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB23,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB23,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB23,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB23,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB23,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB23,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB23,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB23,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB23,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB23,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB23,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB23,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB23,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB23,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB23,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB23,25" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotB24,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB24,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB24,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB24,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB24,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB24,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB24,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB24,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB24,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB24,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB24,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB24,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB24,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB24,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB24,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB24,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB24,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB24,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB24,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB24,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB24,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB24,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB24,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB24,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB24,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB24,25" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotB25,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB25,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB25,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB25,3" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB25,4" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB25,5" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB25,6" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB25,7" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB25,8" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB25,9" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB25,10" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB25,11" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB25,12" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB25,13" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB25,14" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB25,15" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB25,16" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB25,17" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB25,18" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB25,19" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB25,20" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB25,21" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB25,22" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB25,23" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB25,24" class="gccPlot"></div></td>
+                    <td><div id="gccPlotB25,25" class="gccPlot"></div></td>
+                </tr>
+            </table>
+            <table id="gccGroupC">
+                <tr>
+                    <td><div id="gccPlotC0,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotC0,1" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotC1,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotC1,1" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotC2,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotC2,1" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotC3,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotC3,1" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotC4,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotC4,1" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotC5,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotC5,1" class="gccPlot"></div></td>
+                </tr>
+            </table>
+            <table id="gccGroupD">
+                <tr>
+                    <td><div id="gccPlotD0,0" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotD1,0" class="gccPlot"></div></td>
+                </tr>
+            </table>
+            <table id="gccGroupE">
+                <tr>
+                    <td><div id="gccPlotE0,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotE0,1" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotE1,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotE1,1" class="gccPlot"></div></td>
+                </tr>
+            </table>
+            <table id="gccGroupF">
+                <tr>
+                    <td><div id="gccPlotF0,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotF0,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotF0,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotF0,3" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotF1,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotF1,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotF1,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotF1,3" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotF2,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotF2,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotF2,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotF2,3" class="gccPlot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="gccPlotF3,0" class="gccPlot"></div></td>
+                    <td><div id="gccPlotF3,1" class="gccPlot"></div></td>
+                    <td><div id="gccPlotF3,2" class="gccPlot"></div></td>
+                    <td><div id="gccPlotF3,3" class="gccPlot"></div></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="Farm" style="display: ''">
+            <button id="resetFarmButton" type="button">Reset Farm</button>
+            <img id="compass" src="/images/farmPlots/compass.png">
+            <table id="groupA">
+                <tr>
+                    <td><div id="plotA0,0" class="plot"></div></td>
+                    <td><div id="plotA0,1" class="plot"></div></td>
+                    <td><div id="plotA0,2" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotA1,0" class="plot"></div></td>
+                    <td><div id="plotA1,1" class="plot"></div></td>
+                    <td><div id="plotA1,2" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotA2,0" class="plot"></div></td>
+                    <td><div id="plotA2,1" class="plot"></div></td>
+                    <td><div id="plotA2,2" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotA3,0" class="plot"></div></td>
+                    <td><div id="plotA3,1" class="plot"></div></td>
+                    <td><div id="plotA3,2" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotA4,0" class="plot"></div></td>
+                    <td><div id="plotA4,1" class="plot"></div></td>
+                    <td><div id="plotA4,2" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotA5,0" class="plot"></div></td>
+                    <td><div id="plotA5,1" class="plot"></div></td>
+                    <td><div id="plotA5,2" class="plot"></div></td>
+                </tr>
+            </table>
+            <table id="groupB">
+                <tr>
+                    <td><div id="plotB0,0" class="plot"></div></td>
+                    <td><div id="plotB0,1" class="plot"></div></td>
+                    <td><div id="plotB0,2" class="plot"></div></td>
+                    <td><div id="plotB0,3" class="plot"></div></td>
+                    <td><div id="plotB0,4" class="plot"></div></td>
+                    <td><div id="plotB0,5" class="plot"></div></td>
+                    <td><div id="plotB0,6" class="plot"></div></td>
+                    <td><div id="plotB0,7" class="plot"></div></td>
+                    <td><div id="plotB0,8" class="plot"></div></td>
+                    <td><div id="plotB0,9" class="plot"></div></td>
+                    <td><div id="plotB0,10" class="plot"></div></td>
+                    <td><div id="plotB0,11" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotB1,0" class="plot"></div></td>
+                    <td><div id="plotB1,1" class="plot"></div></td>
+                    <td><div id="plotB1,2" class="plot"></div></td>
+                    <td><div id="plotB1,3" class="plot"></div></td>
+                    <td><div id="plotB1,4" class="plot"></div></td>
+                    <td><div id="plotB1,5" class="plot"></div></td>
+                    <td><div id="plotB1,6" class="plot"></div></td>
+                    <td><div id="plotB1,7" class="plot"></div></td>
+                    <td><div id="plotB1,8" class="plot"></div></td>
+                    <td><div id="plotB1,9" class="plot"></div></td>
+                    <td><div id="plotB1,10" class="plot"></div></td>
+                    <td><div id="plotB1,11" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotB2,0" class="plot"></div></td>
+                    <td><div id="plotB2,1" class="plot"></div></td>
+                    <td><div id="plotB2,2" class="plot"></div></td>
+                    <td><div id="plotB2,3" class="plot"></div></td>
+                    <td><div id="plotB2,4" class="plot"></div></td>
+                    <td><div id="plotB2,5" class="plot"></div></td>
+                    <td><div id="plotB2,6" class="plot"></div></td>
+                    <td><div id="plotB2,7" class="plot"></div></td>
+                    <td><div id="plotB2,8" class="plot"></div></td>
+                    <td><div id="plotB2,9" class="plot"></div></td>
+                    <td><div id="plotB2,10" class="plot"></div></td>
+                    <td><div id="plotB2,11" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotB3,0" class="plot"></div></td>
+                    <td><div id="plotB3,1" class="plot"></div></td>
+                    <td><div id="plotB3,2" class="plot"></div></td>
+                    <td><div id="plotB3,3" class="plot"></div></td>
+                    <td><div id="plotB3,4" class="plot"></div></td>
+                    <td><div id="plotB3,5" class="plot"></div></td>
+                    <td><div id="plotB3,6" class="plot"></div></td>
+                    <td><div id="plotB3,7" class="plot"></div></td>
+                    <td><div id="plotB3,8" class="plot"></div></td>
+                    <td><div id="plotB3,9" class="plot"></div></td>
+                    <td><div id="plotB3,10" class="plot"></div></td>
+                    <td><div id="plotB3,11" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotB4,0" class="plot"></div></td>
+                    <td><div id="plotB4,1" class="plot"></div></td>
+                    <td><div id="plotB4,2" class="plot"></div></td>
+                    <td><div id="plotB4,3" class="plot"></div></td>
+                    <td><div id="plotB4,4" class="plot"></div></td>
+                    <td><div id="plotB4,5" class="plot"></div></td>
+                    <td><div id="plotB4,6" class="plot"></div></td>
+                    <td><div id="plotB4,7" class="plot"></div></td>
+                    <td><div id="plotB4,8" class="plot"></div></td>
+                    <td><div id="plotB4,9" class="plot"></div></td>
+                    <td><div id="plotB4,10" class="plot"></div></td>
+                    <td><div id="plotB4,11" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotB5,0" class="plot"></div></td>
+                    <td><div id="plotB5,1" class="plot"></div></td>
+                    <td><div id="plotB5,2" class="plot"></div></td>
+                    <td><div id="plotB5,3" class="plot"></div></td>
+                    <td><div id="plotB5,4" class="plot"></div></td>
+                    <td><div id="plotB5,5" class="plot"></div></td>
+                    <td><div id="plotB5,6" class="plot"></div></td>
+                    <td><div id="plotB5,7" class="plot"></div></td>
+                    <td><div id="plotB5,8" class="plot"></div></td>
+                    <td><div id="plotB5,9" class="plot"></div></td>
+                    <td><div id="plotB5,10" class="plot"></div></td>
+                    <td><div id="plotB5,11" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotB6,0" class="plot"></div></td>
+                    <td><div id="plotB6,1" class="plot"></div></td>
+                    <td><div id="plotB6,2" class="plot"></div></td>
+                    <td><div id="plotB6,3" class="plot"></div></td>
+                    <td><div id="plotB6,4" class="plot"></div></td>
+                    <td><div id="plotB6,5" class="plot"></div></td>
+                    <td><div id="plotB6,6" class="plot"></div></td>
+                    <td><div id="plotB6,7" class="plot"></div></td>
+                    <td><div id="plotB6,8" class="plot"></div></td>
+                    <td><div id="plotB6,9" class="plot"></div></td>
+                    <td><div id="plotB6,10" class="plot"></div></td>
+                    <td><div id="plotB6,11" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotB7,0" class="plot"></div></td>
+                    <td><div id="plotB7,1" class="plot"></div></td>
+                    <td><div id="plotB7,2" class="plot"></div></td>
+                    <td><div id="plotB7,3" class="plot"></div></td>
+                    <td><div id="plotB7,4" class="plot"></div></td>
+                    <td><div id="plotB7,5" class="plot"></div></td>
+                    <td><div id="plotB7,6" class="plot"></div></td>
+                    <td><div id="plotB7,7" class="plot"></div></td>
+                    <td><div id="plotB7,8" class="plot"></div></td>
+                    <td><div id="plotB7,9" class="plot"></div></td>
+                    <td><div id="plotB7,10" class="plot"></div></td>
+                    <td><div id="plotB7,11" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotB8,0" class="plot"></div></td>
+                    <td><div id="plotB8,1" class="plot"></div></td>
+                    <td><div id="plotB8,2" class="plot"></div></td>
+                    <td><div id="plotB8,3" class="plot"></div></td>
+                    <td><div id="plotB8,4" class="plot"></div></td>
+                    <td><div id="plotB8,5" class="plot"></div></td>
+                    <td><div id="plotB8,6" class="plot"></div></td>
+                    <td><div id="plotB8,7" class="plot"></div></td>
+                    <td><div id="plotB8,8" class="plot"></div></td>
+                    <td><div id="plotB8,9" class="plot"></div></td>
+                    <td><div id="plotB8,10" class="plot"></div></td>
+                    <td><div id="plotB8,11" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotB9,0" class="plot"></div></td>
+                    <td><div id="plotB9,1" class="plot"></div></td>
+                    <td><div id="plotB9,2" class="plot"></div></td>
+                    <td><div id="plotB9,3" class="plot"></div></td>
+                    <td><div id="plotB9,4" class="plot"></div></td>
+                    <td><div id="plotB9,5" class="plot"></div></td>
+                    <td><div id="plotB9,6" class="plot"></div></td>
+                    <td><div id="plotB9,7" class="plot"></div></td>
+                    <td><div id="plotB9,8" class="plot"></div></td>
+                    <td><div id="plotB9,9" class="plot"></div></td>
+                    <td><div id="plotB9,10" class="plot"></div></td>
+                    <td><div id="plotB9,11" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotB10,0" class="plot"></div></td>
+                    <td><div id="plotB10,1" class="plot"></div></td>
+                    <td><div id="plotB10,2" class="plot"></div></td>
+                    <td><div id="plotB10,3" class="plot"></div></td>
+                    <td><div id="plotB10,4" class="plot"></div></td>
+                    <td><div id="plotB10,5" class="plot"></div></td>
+                    <td><div id="plotB10,6" class="plot"></div></td>
+                    <td><div id="plotB10,7" class="plot"></div></td>
+                    <td><div id="plotB10,8" class="plot"></div></td>
+                    <td><div id="plotB10,9" class="plot"></div></td>
+                    <td><div id="plotB10,10" class="plot"></div></td>
+                    <td><div id="plotB10,11" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotB11,0" class="plot"></div></td>
+                    <td><div id="plotB11,1" class="plot"></div></td>
+                    <td><div id="plotB11,2" class="plot"></div></td>
+                    <td><div id="plotB11,3" class="plot"></div></td>
+                    <td><div id="plotB11,4" class="plot"></div></td>
+                    <td><div id="plotB11,5" class="plot"></div></td>
+                    <td><div id="plotB11,6" class="plot"></div></td>
+                    <td><div id="plotB11,7" class="plot"></div></td>
+                    <td><div id="plotB11,8" class="plot"></div></td>
+                    <td><div id="plotB11,9" class="plot"></div></td>
+                    <td><div id="plotB11,10" class="plot"></div></td>
+                    <td><div id="plotB11,11" class="plot"></div></td>
+                </tr>
+            </table>
+            <table id="groupC">
+                <tr>
+                    <td><div id="plotC0,0" class="plot"></div></td>
+                    <td><div id="plotC0,1" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotC1,0" class="plot"></div></td>
+                    <td><div id="plotC1,1" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotC2,0" class="plot"></div></td>
+                    <td><div id="plotC2,1" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotC3,0" class="plot"></div></td>
+                    <td><div id="plotC3,1" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotC4,0" class="plot"></div></td>
+                    <td><div id="plotC4,1" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotC5,0" class="plot"></div></td>
+                    <td><div id="plotC5,1" class="plot"></div></td>
+                </tr>
+            </table>
+            <table id="groupD">
+                <tr>
+                    <td><div id="plotD0,0" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotD1,0" class="plot"></div></td>
+                </tr>
+            </table>
+            <table id="groupE">
+                <tr>
+                    <td><div id="plotE0,0" class="plot"></div></td>
+                    <td><div id="plotE0,1" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotE1,0" class="plot"></div></td>
+                    <td><div id="plotE1,1" class="plot"></div></td>
+                </tr>
+            </table>
+            <table id="groupF">
+                <tr>
+                    <td><div id="plotF0,0" class="plot"></div></td>
+                    <td><div id="plotF0,1" class="plot"></div></td>
+                    <td><div id="plotF0,2" class="plot"></div></td>
+                    <td><div id="plotF0,3" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotF1,0" class="plot"></div></td>
+                    <td><div id="plotF1,1" class="plot"></div></td>
+                    <td><div id="plotF1,2" class="plot"></div></td>
+                    <td><div id="plotF1,3" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotF2,0" class="plot"></div></td>
+                    <td><div id="plotF2,1" class="plot"></div></td>
+                    <td><div id="plotF2,2" class="plot"></div></td>
+                    <td><div id="plotF2,3" class="plot"></div></td>
+                </tr>
+                <tr>
+                    <td><div id="plotF3,0" class="plot"></div></td>
+                    <td><div id="plotF3,1" class="plot"></div></td>
+                    <td><div id="plotF3,2" class="plot"></div></td>
+                    <td><div id="plotF3,3" class="plot"></div></td>
+                </tr>
+            </table>
+        </div>
+
+        <script src="TsukiFarm.js"></script>
+    </body>
+</html>
+
+<!--
+Testing out stuff
+
+
+            <br>
+
+            <label id="playerChecklabel">How often do you check your farm? (in hours):</label>
+            <input id="playerCheckInput" type="number">
+            <button id="playerCheckButton" type="button">submit</button>
+
+
+        <button id="farmPlotRemove" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Remove.png"></button>
+            <button id="farmPlotHoe" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Hoe.png"></button>
+            <button id="farmPlotSprinkler" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Sprinkler.png"></button>
+            <button id="farmPlotMegaGrow" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/MegaGrow.png"></button>
+            <button id="farmPlotGigaGrow" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/GigaGrow.png"></button>
+            <button id="farmPlotGoatFert" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/GoatFert.png"></button>
+            <button id="farmPlotBullFert" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/BullFert.png"></button>
+            <button id="farmPlotElephantFert" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/ElephantFert.png"></button>
+            <br>
+            <button id="farmPlotCarrot" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Carrot.png"></button>
+            <button id="farmPlotGrape" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Grape.png"></button>
+            <button id="farmPlotGloamroot" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Gloamroot.png"></button>
+            <button id="farmPlotStrawberry" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Strawberry.png"></button>
+            <button id="farmPlotTurnip" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Turnip.png"></button>
+            <button id="farmPlotPotato" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Potato.png"></button>
+            <button id="farmPlotOnion" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Onion.png"></button>
+            <button id="farmPlotPumpkin" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Pumpkin.png"></button>
+            <button id="farmPlotMelon" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Melon.png"></button>
+
+        <audio controls autoplay muted loop src="/music/ACNH 5am.mp3"></audio>
+
+        <iframe style="border: 0;" 
+        src="https://docs.google.com/spreadsheets/d/1_iIXA2UDMTtcc3vhpwaQfG5mwhXibArKYHdmygSAhEI/edit?pli=1#gid=0"
+        width="700"
+        height="700"></iframe>
+        <br>
+        <br>
+        <a href="https://docs.google.com/spreadsheets/d/1_iIXA2UDMTtcc3vhpwaQfG5mwhXibArKYHdmygSAhEI/edit?pli=1#gid=0" 
+        target="_blank" 
+        title="yoooo i popped off on this one">
+            <img src ="images/ashCool.png"
+            height="100"
+            alt="ash Cool emote"
+            title="ashCool.png"> 
+        </a>
+-->
