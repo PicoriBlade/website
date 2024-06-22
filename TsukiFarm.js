@@ -1,7 +1,5 @@
 //(made by Sylvie) 🏳️‍⚧️
 //disord @syiv 
-//"waaahhhh im a coding professor early returns is bad waaahhhhhhhhhhhh"
-//KILL YOURSELFFFFF
 
 let playerCheck = 0;
 let chosenFarmSpot = 0;
