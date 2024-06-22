@@ -1,0 +1,715 @@
+body{
+    background-image: url(/images/Backgrounds/grass.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+td{
+    padding: 0px;
+}
+table{
+    border-collapse: collapse;
+}
+
+a:hover{
+    height: 2vh;
+    color:crimson;
+}
+
+.bar{
+    height: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1vh;
+    padding: 0px;
+}
+#barRow{
+    height: 4vh;
+}
+#barBox{
+    height: 4vh;
+}
+
+#resume{
+    border: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 1300px;
+}
+
+.homeButton{
+    height: 4vh;
+    margin-top: 1vh;
+}
+.unfilled{
+    height: 2vh;
+    font-size: 2vh;
+    background-color: white;
+    border-style: outset; 
+    border-width: .25vh; 
+    border-radius: 1vh;
+    border-color: white; 
+    color: black;
+    text-decoration: none;
+}
+.filled{
+    height: 2vh;
+    font-size: 2vh;
+    background-color: lightblue;
+    border-style: outset; 
+    border-width: .25vh; 
+    border-radius: 1vh;
+    border-color: lightblue; 
+    color: rgb(42, 42, 42);
+    text-decoration: none;
+}
+
+
+#farmPlotBox{
+    background-color: rgb(11, 11, 11);
+    border-style: outset; 
+    border-width: .1vh; 
+    border-color: black; 
+    border-radius: 1vh;
+    color: white;
+    text-decoration: none;
+    padding: 1vh;
+    width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2vh;
+}
+    #IMADETHIS{
+        background: linear-gradient(skyblue, lightpink, white, lightpink, skyblue);
+        background-repeat: no-repeat;
+        border-style: outset; 
+        border-width: .25vh; 
+        border-radius: 1vh;
+        border-color: white; 
+        color: red;
+        text-decoration: none;
+        text-align: center;
+        padding: 0px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: .5vh;
+    }
+    #instructions{
+        background: linear-gradient(skyblue, lightpink, white, lightpink, skyblue);
+        background-repeat: no-repeat;
+        border-style: outset; 
+        border-width: .25vh; 
+        border-color: white; 
+        border-radius: 1vh;
+        color: red;
+        text-decoration: none;
+        padding: 0px;
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #farmPlotSelect{
+        height: 2vh;
+        font-size: 1.4vh;
+        padding: 0px;
+        border-width: 0px; 
+    }
+    #farmPlotDirectionSelect{
+        height: 2vh;
+        font-size: 1.4vh;
+        padding: 0px;
+        border-width: 0px; 
+    }
+    #farmPlotButton{
+        height: 2vh;
+        font-size: 1.4vh;
+        padding: 0px;
+        border-width: 0px; 
+    }
+
+    .switch {
+            position: relative;
+            display: inline-block;
+            width: 4vh;
+            height: 2vh;
+            bottom: -.2vh;
+        }
+        
+        /* Hide default HTML checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 1.3vh;
+            width: 1.3vh;
+            left: .3vh;
+            bottom: .3vh;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+        
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+        
+        input:checked + .slider:before {
+            -webkit-transform: translateX(2vh);
+            -ms-transform: translateX(2vh);
+            transform: translateX(2vh);
+        }
+        
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 1.9vh;
+        }
+        
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+    #plotCounterBox{
+        margin-top: 2px;
+        background-color: rgb(120, 120, 120);
+        border-radius: 4px;
+        width: 90%;
+    }
+        .counterBox{
+            margin-top: 2px;
+            width: 4%;
+            aspect-ratio: 1 / 1;
+            border: 1%;
+            color: white;
+            font-size: 2vw;
+            display: "";
+        }
+            .counterBoximg{
+                margin-top: 2px;
+                width: 90%;
+                aspect-ratio: 1 / 1;
+                border: 1%;
+            }
+
+            #gcc4Leaf{
+                margin-top: 2px;
+                width: 4%;
+                aspect-ratio: 1 / 1;
+                border: 1%;
+                color: white;
+                font-size: 2vw;
+            }
+            #gcc16Leaf{
+                margin-top: 2px;
+                width: 4%;
+                aspect-ratio: 1 / 1;
+                border: 1%;
+                color: white;
+                font-size: 2vw;
+            }
+            #gcc64Leaf{
+                margin-top: 2px;
+                width: 4%;
+                aspect-ratio: 1 / 1;
+                border: 1%;
+                color: white;
+                font-size: 2vw;
+            }
+
+        .counterBox2{
+            margin-top: 2px;
+            width: 4%;
+            aspect-ratio: 1 / 1;
+            border: 1%;
+            color: rgb(144, 255, 153);
+            font-size: 2vw;
+        }
+            .counterBox2img{
+                margin-top: 2px;
+                width: 90%;
+                aspect-ratio: 1 / 1;
+                border: 1%;
+            }
+    #playerProfitlabel{
+        color: rgb(255, 248, 192);
+    }
+    #playerProfitScore{
+        color: rgb(255, 238, 0);
+    }
+    #playerStrangeRatelabel{
+        color: rgb(213, 210, 255);
+    }
+    #playerStrangerateScore{
+        color: rgb(164, 157, 255);
+    }
+    #playerCloverTimelabel{
+        color: rgb(172, 230, 172);
+    }
+    #playerCloverTimeScore{
+        color: rgb(74, 255, 74);
+    }   
+     
+
+#CloverFarm{
+    background-color: rgb(0, 0, 0);
+    border-style: outset; 
+    border-width: .3vw; 
+    border-color: rgb(246, 255, 0); 
+    border-radius: .4vw; 
+    color: rgb(194, 171, 41);
+    text-decoration: none;
+    padding: .4vw;
+    width: 90vw;
+    height: 74vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    .gccPlot{
+        width: 2vw;
+        height: 2vw;
+        border: 0px;
+        border-color: black; 
+        color: red;
+    }
+    .gccPlotNull{
+        width: 2vw;
+        height: 2vw;
+        border: 0px;
+        background-color: rgb(0, 0, 0);
+    }
+/*/////////////////////////////////*/
+#gccGroupA{
+    position: relative;
+    left: 0vw;
+    top: -1vw;
+}
+#gccGroupA tr:nth-child(even) td:nth-child(odd){
+    background-color: #cbbd70;
+}
+#gccGroupA tr:nth-child(odd) td:nth-child(even){
+    background-color: #cbbd70;
+}
+#gccGroupA tr:nth-child(even) td:nth-child(even){
+    background-color: #feffac;
+}
+#gccGroupA tr:nth-child(odd) td:nth-child(odd){
+    background-color: #eee79e;
+}
+
+#gccGroupB{
+    position: relative;
+    left: 16.4vw;
+    top: -53vw;
+}
+#gccGroupB tr:nth-child(even) td:nth-child(even){
+    background-color: #cbbd70;
+}
+#gccGroupB tr:nth-child(odd) td:nth-child(odd){
+    background-color: #cbbd70;
+}
+#gccGroupB tr:nth-child(odd) td:nth-child(even){
+    background-color: #feffac;
+}
+#gccGroupB tr:nth-child(even) td:nth-child(odd){
+    background-color: #eee79e;
+}
+
+#gccGroupC{
+    position: relative;
+    left: 70vw;
+    top: -40vw;
+}
+#gccGroupC tr:nth-child(even) td:nth-child(even){
+    background-color: #cbbd70;
+}
+#gccGroupC tr:nth-child(odd) td:nth-child(odd){
+    background-color: #cbbd70;
+}
+#gccGroupC tr:nth-child(odd) td:nth-child(even){
+    background-color: #feffac;
+}
+#gccGroupC tr:nth-child(even) td:nth-child(odd){
+    background-color: #eee79e;
+}
+
+#gccGroupD{
+    position: relative;
+    left: 82vw;
+    top: -60vw;
+}
+#gccGroupD tr:nth-child(even) td:nth-child(even){
+    background-color: #cbbd70;
+}
+#gccGroupD tr:nth-child(odd) td:nth-child(odd){
+    background-color: #cbbd70;
+}
+#gccGroupD tr:nth-child(odd) td:nth-child(even){
+    background-color: #feffac;
+}
+#gccGroupD tr:nth-child(even) td:nth-child(odd){
+    background-color: #eee79e;
+}
+
+#gccGroupE{
+    position: relative;
+    left: 78vw;
+    top: -55vw;
+}
+#gccGroupE tr:nth-child(even) td:nth-child(even){
+    background-color: #cbbd70;
+}
+#gccGroupE tr:nth-child(odd) td:nth-child(odd){
+    background-color: #cbbd70;
+}
+#gccGroupE tr:nth-child(odd) td:nth-child(even){
+    background-color: #feffac;
+}
+#gccGroupE tr:nth-child(even) td:nth-child(odd){
+    background-color: #eee79e;
+}
+
+#gccGroupF{
+    position: relative;
+    left: 18.4vw;
+    top: -72.6vw;
+}
+#gccGroupF tr:nth-child(even) td:nth-child(even){
+    background-color: #cbbd70;
+}
+#gccGroupF tr:nth-child(odd) td:nth-child(odd){
+    background-color: #cbbd70;
+}
+#gccGroupF tr:nth-child(odd) td:nth-child(even){
+    background-color: #feffac;
+}
+#gccGroupF tr:nth-child(even) td:nth-child(odd){
+    background-color: #eee79e;
+}
+
+/*////////////////////////////////////*/
+#Farm{
+    background-color: rgb(73, 122, 102);
+    border-style: outset; 
+    border-width: .3vw; 
+    border-color: rgb(73, 122, 102); 
+    border-radius: .4vw; 
+    color: rgb(73, 122, 102);
+    text-decoration: none;
+    padding: .4vw;
+    width: 90vw;
+    height: 74vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+    #resetFarmButton{
+        position: relative;
+        left: 1vw;
+        top: -22vw;
+        background-color: white;
+        border-width: 0px; 
+        width: 14vw;
+        height: 4vw;
+        padding: 0px;
+        font-size: 2vw;
+        text-align: center;
+    }
+    #compass{
+        position: relative;
+        width: 28vw;
+        height: 26vw;
+        left: 47vw;
+        top: 46vw;
+
+    }
+
+    .plot{
+        width: 4vw;
+        height: 4vw;
+        border: 0px;
+        border-color: black; 
+        color: red;
+    }
+    .plotNull{
+        width: 4vw;
+        height: 4vw;
+        border: 0px;
+        background-color: rgb(73, 122, 102);
+    }
+    .plotMainItem{
+        position: absolute;
+        width: 4vw;
+        height: 4vw;
+        border: 0px;
+        border-color: black; 
+        color: red;
+    }
+        .plotUv{
+            position: absolute;
+            width: 1vw;
+            height: 1vw;
+            margin-left: 2vw;
+            margin-top: 0px;
+        }
+        .plotFert{
+            position: absolute;
+            width: 1vw;
+            height: 1vw;
+            margin-left: 3vw;
+            margin-top: 0px;
+        }
+        .plotWatered{
+            position: absolute;
+            width: 1vw;
+            height: 1vw;
+            margin-left: 3vw;
+            margin-top: 1vw;
+        }
+        .plotStrawberried{
+            position: absolute;
+            width: 1vw;
+            height: 1.5vw;
+            margin-left: 3vw;
+            margin-top: 2vw;
+            font-size: 1.2vw;
+            padding: 0px;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+            background-color: red;
+        }
+
+/*/////////////////////////////////*/
+/*//////ARROWS!!!!!!!!!!!!!////////*/
+/*/////////////////////////////////*/
+    .upMegaGrow{
+        filter: invert(38%) sepia(38%) saturate(4398%) hue-rotate(276deg) brightness(92%) contrast(108%);
+        opacity: .5;
+        position: relative;
+        rotate: 0deg;
+        width: 4vw;
+        height: 4vw;
+    }
+    .rightMegaGrow{
+        filter: invert(38%) sepia(38%) saturate(4398%) hue-rotate(276deg) brightness(92%) contrast(108%);
+        opacity: .5;
+        position: relative;
+        rotate: 90deg;
+        width: 4vw;
+        height: 4vw;
+    }
+    .downMegaGrow{
+        filter: invert(38%) sepia(38%) saturate(4398%) hue-rotate(276deg) brightness(92%) contrast(108%);
+        opacity: .5;
+        position: relative;
+        rotate: 180deg;
+        width: 4vw;
+        height: 4vw;
+    }
+    .leftMegaGrow{
+        filter: invert(38%) sepia(38%) saturate(4398%) hue-rotate(276deg) brightness(92%) contrast(108%);
+        opacity: .5;
+        position: relative;
+        rotate: 270deg;
+        width: 4vw;
+        height: 4vw;
+    }
+/*/////////////////////////////////*/
+    .upGigaGrow{
+        filter: invert(15%) sepia(36%) saturate(5939%) hue-rotate(278deg) brightness(87%) contrast(107%);
+        opacity: .5;
+        position: relative;
+        rotate: 0deg;
+        width: 4vw;
+        height: 4vw;
+    }
+    .rightGigaGrow{
+        filter: invert(15%) sepia(36%) saturate(5939%) hue-rotate(278deg) brightness(87%) contrast(107%);
+        opacity: .5;
+        position: relative;
+        rotate: 90deg;
+        width: 4vw;
+        height: 4vw;
+    }
+    .downGigaGrow{
+        filter: invert(15%) sepia(36%) saturate(5939%) hue-rotate(278deg) brightness(87%) contrast(107%);
+        opacity: .5;
+        position: relative;
+        rotate: 180deg;
+        width: 4vw;
+        height: 4vw;
+    }
+    .leftGigaGrow{
+        filter: invert(15%) sepia(36%) saturate(5939%) hue-rotate(278deg) brightness(87%) contrast(107%);
+        opacity: .5;
+        position: relative;
+        rotate: 270deg;
+        width: 4vw;
+        height: 4vw;
+    }
+/*/////////////////////////////////*/
+    #groupA{
+        position: relative;
+        left: 2vw;
+        top: -1vw;
+    }
+    #groupA tr:nth-child(even) td:nth-child(odd){
+        background-color: #b2dfbc;
+    }
+    #groupA tr:nth-child(odd) td:nth-child(even){
+        background-color: #b2dfbc;
+    }
+    #groupA tr:nth-child(even) td:nth-child(even){
+        background-color: #cdffda;
+    }
+    #groupA tr:nth-child(odd) td:nth-child(odd){
+        background-color: #cdffcd;
+    }
+
+    #groupB{
+        position: relative;
+        left: 18.4vw;
+        top: -49vw;
+    }
+    #groupB tr:nth-child(even) td:nth-child(even){
+        background-color: #b2dfbc;
+    }
+    #groupB tr:nth-child(odd) td:nth-child(odd){
+        background-color: #b2dfbc;
+    }
+    #groupB tr:nth-child(odd) td:nth-child(even){
+        background-color: #cdffda;
+    }
+    #groupB tr:nth-child(even) td:nth-child(odd){
+        background-color: #cdffcd;
+    }
+
+    #groupC{
+        position: relative;
+        left: 70.8vw;
+        top: -97vw;
+    }
+    #groupC tr:nth-child(even) td:nth-child(even){
+        background-color: #b2dfbc;
+    }
+    #groupC tr:nth-child(odd) td:nth-child(odd){
+        background-color: #b2dfbc;
+    }
+    #groupC tr:nth-child(odd) td:nth-child(even){
+        background-color: #cdffda;
+    }
+    #groupC tr:nth-child(even) td:nth-child(odd){
+        background-color: #cdffcd;
+    }
+
+    #groupD{
+        position: relative;
+        left: 83.2vw;
+        top: -121vw;
+    }
+    #groupD tr:nth-child(even) td:nth-child(even){
+        background-color: #b2dfbc;
+    }
+    #groupD tr:nth-child(odd) td:nth-child(odd){
+        background-color: #b2dfbc;
+    }
+    #groupD tr:nth-child(odd) td:nth-child(even){
+        background-color: #cdffda;
+    }
+    #groupD tr:nth-child(even) td:nth-child(odd){
+        background-color: #cdffcd;
+    }
+
+    #groupE{
+        position: relative;
+        left: 79.2vw;
+        top: -113vw;
+    }
+    #groupE tr:nth-child(even) td:nth-child(even){
+        background-color: #b2dfbc;
+    }
+    #groupE tr:nth-child(odd) td:nth-child(odd){
+        background-color: #b2dfbc;
+    }
+    #groupE tr:nth-child(odd) td:nth-child(even){
+        background-color: #cdffda;
+    }
+    #groupE tr:nth-child(even) td:nth-child(odd){
+        background-color: #cdffcd;
+    }
+
+    #groupF{
+        position: relative;
+        left: 18.4vw;
+        top: -84.6vw;
+    }
+    #groupF tr:nth-child(even) td:nth-child(even){
+        background-color: #b2dfbc;
+    }
+    #groupF tr:nth-child(odd) td:nth-child(odd){
+        background-color: #b2dfbc;
+    }
+    #groupF tr:nth-child(odd) td:nth-child(even){
+        background-color: #cdffda;
+    }
+    #groupF tr:nth-child(even) td:nth-child(odd){
+        background-color: #cdffcd;
+    }
+
+
+
+
+
+
+
+
+
+/*
+
+.farmPlotButton{
+    height: 50px;
+    width: 50px;
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.farmPlotButtonClicked{
+    height: 50px;
+    width: 50px;
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    color: lightblue;
+    background-color: lightblue;
+}
+body{
+    background: linear-gradient(skyblue, lightpink, white, lightpink, skyblue);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgb(230, 226, 176);
+}
+*/
