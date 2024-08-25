@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tsuki Farm</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="/images/Buttons/TsukiFarm.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <table class="bar">
+            <tr align="center" id = "barRow">
+                <td id = "barBox">
+                    <a href="index.html" id = "barBox"
+                        title="Home" >
+                            <img src ="images/Buttons/Home.png"
+                            class= "homeButton" 
+                            alt="home button"
+                            title="Home"> 
+                    </a>
+                </td id = "barBox">
+                <td id = "barBox"></td>
+                <td id = "barBox">
+                    <a href="TsukiFarm.html" id = "barBox"
+                        title="TsukiFarm" >
+                            <img src ="images/Buttons/TsukiFarm.png"
+                            class= "homeButton" 
+                            alt="Tsuki Farm button"
+                            title="Tsuki Farm"
+                            style="border-radius: 5px;"> 
+                    </a>
+                </td>
+            </tr>
+            <tr align="center" id = "barRow">
+                <td class= "homeButton" id = "barBox">
+                    <a class="unfilled" id = "barBox"
+                        href="index.html" 
+                        title="Home" >
+                            &nbspHome&nbsp
+                    </a>
+                </td>
+                <td id = "barBox"></td>
+                <td class= "homeButton" id = "barBox">
+                    <a class="filled" id = "barBox"
+                        href="TsukiFarm.html" 
+                        title="TsukiFarm" >
+                            &nbspTsuki&nbsp
+                    </a>
+                </td>
+            </tr>
+        </table>
+        <hr>
+
+        <div id="farmPlotBox">
+            <div id="IMADETHIS">MADE BY SYLVIE <br>@syiv on Discord</div>
+            <div id="englishOrSpanish"></div>
+            <div id="instructions">
+                Instructions:<br>
+                --N/A :(
+            </div>
+        </div>
+
+        <div id="1"></div>
+
+        <div id="Farm" style="display: ''">
+        </div>
+
+        <div id="oop"></div>
+        
+        
+        <script src="data.js"></script>
+        <script src="group.js"></script>
+        <script src="plot.js"></script>
+        <script src="TsukiFarm.js"></script>
+    
+        
+    </body>
+</html>
+
+<!--
+Testing out stuff
+
+
+<div style="right: 1vw; left: ''; direction: rtl;display: none;" id = "toolBarGroup">
+    <div id="toolBarHider">
+        <img class="toolBarHiderImg" src="/images/farmPlots/hide.png">
+    </div>
+    <div style="display: none" id = "toolBar">
+        <div id = "plotSelector">
+            <img style="filter: ''" class="plotSelectorImg" id="plotSelectorEmpty" src="/images/farmPlots/Remove.png">
+            <img style="filter: ''" class="plotSelectorImg" id="plotSelectorSprinkler" src="/images/farmPlots/Sprinkler.png">
+            <img style="filter: ''" class="plotSelectorImg" id="plotSelectorLaneSprinkler" src="/images/farmPlots/LaneSprinkler.png">
+            <img style="filter: ''" class="plotSelectorImg" id="plotSelectorMegaGrow" src="/images/farmPlots/MegaGrow.png">
+            <img style="filter: ''" class="plotSelectorImg" id="plotSelectorGigaGrow" src="/images/farmPlots/GigaGrow.png">
+            <img style="filter: ''" class="plotSelectorImg" id="plotSelectorGoatFert" src="/images/farmPlots/GoatFert.png">
+            <img style="filter: ''" class="plotSelectorImg" id="plotSelectorBullFert" src="/images/farmPlots/BullFert.png">
+            <img style="filter: ''" class="plotSelectorImg" id="plotSelectorElephantFert" src="/images/farmPlots/ElephantFert.png">
+            <img style="filter: ''" class="plotSelectorImg" id="plotSelectorPlant" src="/images/farmPlots/Plant.png">
+            <img style="filter: ''" class="plotSelectorImg" id="plotSelector4 Leaf Clover" src="/images/farmPlots/4 Leaf Clover.png">
+            <img style="filter: ''" class="plotSelectorImg" id="plotSelector16 Leaf Clover" src="/images/farmPlots/16 Leaf Clover.png">
+            <img style="filter: ''" class="plotSelectorImg" id="plotSelector64 Leaf Clover" src="/images/farmPlots/64 Leaf Clover.png">
+            <img style="filter: ''" class="plotSelectorImg" id="plotSelectorFarm" src="/images/farmPlots/Farm.png">
+            <img style="filter: ''" class="plotSelectorImg" id="plotSelectorCarrot" src="/images/farmPlots/Carrot.png">
+            <img style="filter: ''" class="plotSelectorImg" id="plotSelectorGrape" src="/images/farmPlots/Grape.png">
+            <img style="filter: ''" class="plotSelectorImg" id="plotSelectorGloamroot" src="/images/farmPlots/Gloamroot.png">
+            <img style="filter: ''" class="plotSelectorImg" id="plotSelectorStrawberry" src="/images/farmPlots/Strawberry.png">
+            <img style="filter: ''" class="plotSelectorImg" id="plotSelectorTurnip" src="/images/farmPlots/Turnip.png">
+            <img style="filter: ''" class="plotSelectorImg" id="plotSelectorPotato" src="/images/farmPlots/Potato.png">
+            <img style="filter: ''" class="plotSelectorImg" id="plotSelectorOnion" src="/images/farmPlots/Onion.png">
+            <img style="filter: ''" class="plotSelectorImg" id="plotSelectorPumpkin" src="/images/farmPlots/Pumpkin.png">
+            <img style="filter: ''" class="plotSelectorImg" id="plotSelectorMelon" src="/images/farmPlots/Melon.png">
+        </div>
+        <div id="toolBarFlipper">
+            <img style="display: ''" class="toolBarFlipperImg" src="/images/farmPlots/flip.png">
+        </div>
+    </div>
+</div>  
+
+
+            <button id="resetFarmButton" type="button">Reset Farm</button>
+
+            <label class="switch">
+                <input type="checkbox" id="fertSelect">
+                <span class="slider round"></span>
+            </label>
+            <label id="fertcosttogglelabel"> Incorporate Fert Cost? </label>
+            <br>
+
+            <label class="switch">
+                <input type="checkbox" id="strangeSelect">
+                <span class="slider round"></span>
+            </label>
+            <label id="strangeCostTogglelabel"> Include Strange Rate in Profit? </label>
+            <br>
+
+
+            <img id="compass" src="/images/farmPlots/compass.png">
+
+
+            <br>
+
+            <label id="playerChecklabel">How often do you check your farm? (in hours):</label>
+            <input id="playerCheckInput" type="number">
+            <button id="playerCheckButton" type="button">submit</button>
+
+
+        <button id="farmPlotRemove" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Remove.png"></button>
+            <button id="farmPlotHoe" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Hoe.png"></button>
+            <button id="farmPlotSprinkler" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Sprinkler.png"></button>
+            <button id="farmPlotMegaGrow" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/MegaGrow.png"></button>
+            <button id="farmPlotGigaGrow" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/GigaGrow.png"></button>
+            <button id="farmPlotGoatFert" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/GoatFert.png"></button>
+            <button id="farmPlotBullFert" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/BullFert.png"></button>
+            <button id="farmPlotElephantFert" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/ElephantFert.png"></button>
+            <br>
+            <button id="farmPlotCarrot" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Carrot.png"></button>
+            <button id="farmPlotGrape" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Grape.png"></button>
+            <button id="farmPlotGloamroot" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Gloamroot.png"></button>
+            <button id="farmPlotStrawberry" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Strawberry.png"></button>
+            <button id="farmPlotTurnip" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Turnip.png"></button>
+            <button id="farmPlotPotato" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Potato.png"></button>
+            <button id="farmPlotOnion" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Onion.png"></button>
+            <button id="farmPlotPumpkin" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Pumpkin.png"></button>
+            <button id="farmPlotMelon" class="farmPlotButton" type="button"><img class="farmPlotButton" src="/images/farmPlots/Melon.png"></button>
+
+        <audio controls autoplay muted loop src="/music/ACNH 5am.mp3"></audio>
+
+        <iframe style="border: 0;" 
+        src="https://docs.google.com/spreadsheets/d/1_iIXA2UDMTtcc3vhpwaQfG5mwhXibArKYHdmygSAhEI/edit?pli=1#gid=0"
+        width="700"
+        height="700"></iframe>
+        <br>
+        <br>
+        <a href="https://docs.google.com/spreadsheets/d/1_iIXA2UDMTtcc3vhpwaQfG5mwhXibArKYHdmygSAhEI/edit?pli=1#gid=0" 
+        target="_blank" 
+        title="yoooo i popped off on this one">
+            <img src ="images/ashCool.png"
+            height="100"
+            alt="ash Cool emote"
+            title="ashCool.png"> 
+        </a>
+
+        <table id="plotCounterBox">
+                <tr>
+                    <td class="counterBox">
+                        <img class="counterBoximg" src="/images/farmPlots/Crops.png">
+                    </td>
+                    <td id="cropCounter" class="counterBox">
+                        0
+                    </td>
+                    <td class="counterBox">
+                        <img class="counterBoximg" src="/images/farmPlots/Sprinkler.png">
+                    </td>
+                    <td id="sprinklerCounter" class="counterBox">
+                        0
+                    </td>
+                    <td class="counterBox">
+                        <img class="counterBoximg" src="/images/farmPlots/LaneSprinkler.png">
+                    </td>
+                    <td id="laneSprinklerCounter" class="counterBox">
+                        0
+                    </td>
+                    <td class="counterBox">
+                        <img class="counterBoximg" src="/images/farmPlots/MegaGrow.png">
+                    </td>
+                    <td id="megauvCounter" class="counterBox">
+                        0
+                    </td>
+                    <td class="counterBox">
+                        <img class="counterBoximg" src="/images/farmPlots/GigaGrow.png">
+                    </td>
+                    <td id="gigauvCounter" class="counterBox">
+                        0
+                    </td>
+                    <td class="counterBox">
+                        <img class="counterBoximg" src="/images/farmPlots/GoatFert.png">
+                    </td>
+                    <td id="goatFertCounter" class="counterBox">
+                        0
+                    </td>
+                    <td class="counterBox">
+                        <img class="counterBoximg" src="/images/farmPlots/BullFert.png">
+                    </td>
+                    <td id="bullFertCounter" class="counterBox">
+                        0
+                    </td>
+                    <td class="counterBox">
+                        <img class="counterBoximg" src="/images/farmPlots/ElephantFert.png">
+                    </td>
+                    <td id="elephantFertCounter" class="counterBox">
+                        0
+                    </td>
+                    <td class="counterBox">
+                        <img class="counterBoximg" src="/images/farmPlots/Plant.png">
+                    </td>
+                    <td id="plantCounter" class="counterBox">
+                        0
+                    </td>
+                    <td id="gcc4Leaf">
+
+                    </td>
+                    <td id="4leafcloverCounter" class="counterBox">
+                        0
+                    </td>
+                    <td id="gcc16Leaf">
+
+                    </td>
+                    <td id="16leafcloverCounter" class="counterBox">
+                        0
+                    </td>
+                    <td id="gcc64Leaf">
+
+                    </td>
+                    <td id="64leafcloverCounter" class="counterBox">
+                        0
+                    </td>
+                </tr>
+                <tr>
+                    <td class="counterBox2" style="display: none">
+                        <img class="counterBox2img" style="display: none" src="/images/farmPlots/Farm.png">
+                    </td>
+                    <td id="plotCounter" class="counterBox2" style="display: none">
+                        0
+                    </td>
+                    <td class="counterBox2" style="display: none">
+                        <img class="counterBox2img" style="display: none" src="/images/farmPlots/Carrot.png">
+                    </td>
+                    <td id="CarrotCounter" class="counterBox2" style="display: none">
+                        0
+                    </td>
+                    <td class="counterBox2" style="display: none">
+                        <img class="counterBox2img" style="display: none" src="/images/farmPlots/Grape.png">
+                    </td>
+                    <td id="GrapeCounter" class="counterBox2" style="display: none">
+                        0
+                    </td>
+                    <td class="counterBox2" style="display: none">
+                        <img class="counterBox2img" style="display: none" src="/images/farmPlots/Gloamroot.png">
+                    </td>
+                    <td id="GloamrootCounter" class="counterBox2" style="display: none">
+                        0
+                    </td>
+                    <td class="counterBox2" style="display: none">
+                        <img class="counterBox2img" style="display: none" src="/images/farmPlots/Strawberry.png">
+                    </td>
+                    <td id="StrawberryCounter" class="counterBox2" style="display: none">
+                        0
+                    </td>
+                    <td class="counterBox2" style="display: none">
+                        <img class="counterBox2img" style="display: none" src="/images/farmPlots/Turnip.png">
+                    </td>
+                    <td id="TurnipCounter" class="counterBox2" style="display: none">
+                        0
+                    </td>
+                    <td class="counterBox2" style="display: none">
+                        <img class="counterBox2img" style="display: none" src="/images/farmPlots/Potato.png">
+                    </td>
+                    <td id="PotatoCounter" class="counterBox2" style="display: none">
+                        0
+                    </td>
+                    <td class="counterBox2" style="display: none">
+                        <img class="counterBox2img" style="display: none" src="/images/farmPlots/Onion.png">
+                    </td>
+                    <td id="OnionCounter" class="counterBox2" style="display: none">
+                        0
+                    </td>
+                    <td class="counterBox2" style="display: none">
+                        <img class="counterBox2img" style="display: none" src="/images/farmPlots/Pumpkin.png">
+                    </td>
+                    <td id="PumpkinCounter" class="counterBox2" style="display: none">
+                        0
+                    </td>
+                    <td class="counterBox2" style="display: none">
+                        <img class="counterBox2img" style="display: none" src="/images/farmPlots/Melon.png">
+                    </td>
+                    <td id="MelonCounter" class="counterBox2" style="display: none">
+                        0
+                    </td>
+                </tr>
+            </table>
+
+            <label id="playerProfitlabel">Hourly Profit:</label>
+            <label id="playerProfitScore">[MIN: 0] [MAX: 0]</label>
+            <br>
+            
+            <label id="playerStrangeRatelabel">Strange Rate:</label>
+            <label id="playerStrangerateScore">0.15%</label>
+            <br>
+
+            <label id="playerCloverTimelabel">Clover Time:</label>
+            <label id="playerCloverTimeScore">100%</label>
+
+            <label class="switch">
+                <input type="checkbox" id="cropListSelect">
+                <span class="slider round"></span>
+            </label>
+            <label id="cropListtogglelabel"> Count Each Crop Individually? </label>
+            <br>
+-->
+
+<!-- 
+            <label id="farmPlotlabel">Plot: </label>
+            <select name="farmPlots" id="farmPlotSelect">
+                <option value="0">Clear</option>
+                <option value="12">Empty Plot</option>
+                <option value="1">Sprinkler</option>
+                <option value="8">Lane Sprinkler</option>
+                <option value="2">MegaGrow</option>
+                <option value="3">GigaGrow</option>
+                <option value="4">Goat Fert</option>
+                <option value="5">Bull Fert</option>
+                <option value="6">Elephant Fert</option>
+                <option value="7">Plant/Flower</option>
+                <option value="9">4&nbsp&nbsp&nbspLeaf Clover</option>
+                <option value="10">16 Leaf Clover</option>
+                <option value="11">64 Leaf Clover</option>
+                <option value="13">Carrot</option>
+                <option value="14">Grape</option>
+                <option value="15">Gloamroot</option>
+                <option value="16">Strawberry</option>
+                <option value="17">Turnip</option>
+                <option value="18">Potato</option>
+                <option value="19">Onion</option>
+                <option value="20">Pumpkin</option>
+                <option value="21">Melon</option>
+            </select>
+            <label id="farmPlotDirectionlabel">Direction: </label>
+            <select name="farmPlotDirection" id="farmPlotDirectionSelect">
+                <option value="0">Up</option>
+                <option value="1">Right</option>
+                <option value="2">Down</option>
+                <option value="3">Left</option>
+            </select>
+-->

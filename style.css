@@ -1,0 +1,1913 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+body{
+    background-image: url(/images/Backgrounds/grass.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+}
+td{
+    padding: 0px;
+}
+table{
+    border-collapse: collapse;
+}
+
+a:hover{
+    height: 2vh;
+    color:crimson;
+}
+
+.bar{
+    height: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1vh;
+    padding: 0px;
+}
+#barRow{
+    height: 4vh;
+}
+#barBox{
+    height: 4vh;
+}
+
+#resume{
+    border: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 1300px;
+}
+
+.homeButton{
+    height: 4vh;
+    margin-top: 1vh;
+}
+.unfilled{
+    height: 2vh;
+    font-size: 2vh;
+    background-color: white;
+    border-style: outset; 
+    border-width: .25vh; 
+    border-radius: 1vh;
+    border-color: white; 
+    color: black;
+    text-decoration: none;
+}
+.filled{
+    height: 2vh;
+    font-size: 2vh;
+    background-color: lightblue;
+    border-style: outset; 
+    border-width: .25vh; 
+    border-radius: 1vh;
+    border-color: lightblue; 
+    color: rgb(42, 42, 42);
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    position: absolute;
+    right: 2vh;
+    width: 1vh;
+}
+::-webkit-scrollbar-track {
+    margin: 1vh;
+    right: 2vh;
+    border-radius: .5vh;
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    width: 5vh;
+    border-radius: .5vh;
+    background: #555;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+    margin-bottom: 1vh; 
+}
+::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+    margin-top: 1vh;
+}
+#plotSelector{
+    overflow-y: scroll; 
+    overflow-x: hidden; 
+    position: fixed;
+    border-style: outset; 
+    border-width: .3vh; 
+    border-radius: 2vh; 
+    padding: .6vh;
+    width: 8vh;
+    height: 60.5vh;
+    border-color: rgb(124, 63, 149); 
+    background-color: rgb(145, 101, 178);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+
+    top: 17.5vh;
+    font-size: 0vh;
+    white-space: 0vh;
+}
+.plotSelectorImg{
+    white-space: 0vh;
+    padding: .2vh;
+    width: 6.3vh
+}
+#toolBarHider{
+    position: fixed;
+    border-style: outset; 
+    border-width: .3vh; 
+    border-radius: 2vh; 
+    padding: 0vh;
+    width: 6.07vh;
+    height: 3vh;
+    border-color: rgb(107, 9, 146); 
+    background-color: rgb(86, 5, 149);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+
+    top: 6.3vh;
+    font-size: 2.5vh;
+    text-align: center;
+
+    white-space: 0vh;
+}
+.toolBarHiderImg{
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    white-space: 0vh;
+    padding: .45vh;
+    width: 5vh
+}
+#toolBarFlipper{
+    position: fixed;
+    border-style: outset; 
+    border-width: .3vh; 
+    border-radius: 2vh; 
+    padding: 0vh;
+    width: 6.07vh;
+    height: 3vh;
+    border-color: rgb(107, 9, 146); 
+    background-color: rgb(86, 5, 149);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+
+    top: 80vh;
+    font-size: 2.5vh;
+    text-align: center;
+
+    white-space: 0vh;
+}
+.toolBarFlipperImg{
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    white-space: 0vh;
+    padding: .45vh;
+    width: 5vh
+}
+
+#farmPlotBox{
+    background-color: rgb(11, 11, 11);
+    border-style: outset; 
+    border-width: .1vh; 
+    border-color: black; 
+    border-radius: 1vh;
+    color: white;
+    text-decoration: none;
+    padding: 1vw;
+    width: 95vw;
+    height: 27.5vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2vw;
+}
+    #IMADETHIS{
+        background: linear-gradient(skyblue, lightpink, white, lightpink, skyblue);
+        background-repeat: no-repeat;
+        border-style: outset; 
+        border-width: .25vw; 
+        border-radius: 1vw;
+        border-color: white; 
+        color: red;
+        text-decoration: none;
+        text-align: center;
+        padding: 0px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: .5vw;
+    }
+    #instructions{
+        position: relative;
+        background: linear-gradient(skyblue, lightpink, white, lightpink, skyblue);
+        background-repeat: no-repeat;
+        border-style: outset; 
+        border-width: .25vw; 
+        border-color: white; 
+        border-radius: 1vw;
+        color: red;
+        text-decoration: none;
+        padding: 0px;
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+        
+        top: -4.2vw;
+    }
+    #englishOrSpanish{
+        position: relative;
+        border-style: outset; 
+        border-color: rgb(255, 255, 255); 
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+
+        border-width: .3vw; 
+        border-radius: 2vw; 
+        padding: 0vw;
+        width: 8vw;
+        height: 4vw;
+        top: -5.5vw;
+        left: 1vw;
+    
+        font-size: 2.5vw;
+        text-align: center;
+    
+        white-space: 0vw;
+    }
+    #englishOrSpanishImg{
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+        white-space: 0vw;
+        padding: .45vw;
+        width: 6.6vw
+    }
+      
+/*///////////////////////////////////////////////*/
+#Grid{
+    background-color: rgb(73, 122, 102);
+    border-style: outset; 
+    border-width: 0vw; 
+    border-color: rgb(73, 122, 102); 
+    border-radius: 0vw; 
+    color: rgb(73, 122, 102);
+    text-decoration: none;
+    padding: 0vw;
+    width: 90vw;
+    height: 74vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+    .gridTable {
+        position: relative;
+    }
+    .gridTable tr:nth-child(even) td:nth-child(odd){
+        background-color: #b2dfbc;
+    }
+    .gridTable tr:nth-child(odd) td:nth-child(even){
+        background-color: #b2dfbc;
+    }
+    .gridTable tr:nth-child(even) td:nth-child(even){
+        background-color: #cdffda;
+    }
+    .gridTable tr:nth-child(odd) td:nth-child(odd){
+        background-color: #cdffcd;
+    }
+/*////////////////////////////////////*/
+#Farm{
+    background-color: rgb(73, 122, 102);
+    user-select: none;
+    border-style:dashed; 
+    border-width: .3vw; 
+    border-color: rgb(112, 200, 165); 
+    border-radius: .4vw; 
+    color: rgb(73, 122, 102);
+    text-decoration: none;
+    padding: 1vw;
+    width: 90vw;
+    height: 93vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+    #gridDiv{
+        position: relative;
+        padding: 0vw;
+        width: 0vw;
+        height: 0vw;
+        white-space: 0vw;
+        top: 17vw;
+        left: 0vw;    
+    }
+        #plotsDiv{
+            position: relative;
+            padding: 0vw;
+            width: 0vw;
+            height: 0vw;
+            white-space: 0vw;
+            top: 0vw;
+            left: 0vw;    
+        }
+        #placerDiv{
+            position: relative;
+            padding: 0vw;
+            width: 0vw;
+            height: 0vw;
+            white-space: 0vw;
+            top: 0vw;
+            left: 0vw;    
+        }
+    #uiDiv{
+        position: relative;
+        padding: 0vw;
+        width: 0vw;
+        height: 0vw;
+        white-space: 0vw;
+        top: 17vw;
+        left: 0vw;    
+    }
+
+    #breedDiv{
+        position: relative;
+        user-select: none;
+        padding: 0vw;
+        width: 0vw;
+        height: 0vw;
+        left: 0vw;
+        top: -17vw;
+        white-space: 0vw;
+    }
+        #breedDisplay{
+            background-color: #73c69c;
+            color: #2a3950;
+            border-radius: .4vw; 
+            border-width: 0px; 
+            width: 89.5vw;
+            height: 16vw;
+            padding: 0vw;
+            font-size: 2vw;
+        }
+            .breedDisplayImgDiv{
+                position: relative;
+                border-width: 0px; 
+                left: 0vw;
+                top: 0vw;
+                width: 0vw;
+                height: 0vw;
+                border-radius: .4vw; 
+            }
+                #breedParentCount{
+                    position: relative;
+                    height: 0vw;
+                    color: #2d694f;
+                    font-size: 3vw;
+                    left: 6.2vw;
+                    top: 0vw;
+                }
+                #breedSpotImg{
+                    filter: invert(25%) sepia(1000%) saturate(5700%) hue-rotate(360deg) brightness(152%) contrast(108%);
+                    position: relative;
+                    width: 2vw;
+                    height: 2vw;
+                    left: 11.5vw;
+                    top: 1vw;
+                }
+                #breedChanceImg{
+                    filter: invert(77%) sepia(10%) saturate(1308%) hue-rotate(305deg) brightness(416%) contrast(102%);
+                    position: relative;
+                    width: 2vw;
+                    height: 2.1vw;
+                    left: 17vw;
+                    top: .85vw;
+                }
+                .bdImg{
+                    white-space: 0vh;
+                    padding: .2vw;
+                    height: 3.2vw;
+                }
+            #breedTableDiv{
+                position: relative;
+                border-width: 0px; 
+                width: 0vw;
+                height: 0vw;
+                border-radius: .4vw; 
+            }
+                #breedTable {
+                    position: relative;
+                    left: 4.4vw;
+                    top: 3.5vw;
+                }
+                    .breedTableCell{
+                        border-color: #73c69c; 
+                        background-color: #d6f2db;
+                        color: #40906b;
+                        text-align: center;
+                        border-style:dotted; 
+                        width: 5vw;
+                        height: 3vw;
+                        border-radius: .4vw; 
+                        border-width: .3vw; 
+                        font-size: 2vw;
+                        padding-top: .5vw;
+                    }
+            #breedProfitTableDiv{
+                position: relative;
+                border-width: 0px; 
+                width: 0vw;
+                height: 0vw;
+                border-radius: .4vw; 
+            }
+                #breedProfitTable {
+                    position: relative;
+                    left: 24.4vw;
+                    top: 3.5vw;
+                    border-radius: .4vw; 
+                }
+                    .breedProfitTableCell{
+                        border-color: #73c69c; 
+                        background-color: #d6f2db;
+                        color: #40906b;
+                        text-align: center;
+                        border-style:dotted; 
+                        width: 5vw;
+                        height: 3vw;
+                        border-radius: .4vw; 
+                        border-width: .3vw; 
+                        font-size: 2vw;
+                        padding-top: .5vw;
+                        margin-right: .5vw;
+                    }
+
+    #eraseFarmDiv{
+        position: relative;
+        padding: 0vw;
+        width: 0vw;
+        height: 0vw;
+        top: 38.3vw;
+        left: 73vw;    
+        white-space: 0vw;
+        background-color: white;
+    }
+        #eraseFarmImg{
+            white-space: 0vw;
+            width: 5.4vw;
+            height: 5.4vw;
+            padding: .45vw;
+        }
+
+    #compass{
+        position: relative;
+        width: 28vw;
+        height: 26vw;
+        left: 46vw;
+        top: 46vw;
+
+    }
+
+    #undoRedoDiv{
+        position: relative;
+        user-select: none;
+        padding: 0vw;
+        width: 0vw;
+        height: 0vw;
+        left: 38vw;
+        top: 52.5vw;
+        white-space: 0vw;
+    }
+        #undoRedo{
+            text-align: center;
+            color: #2a3950;
+            border-radius: .4vw; 
+            border-width: 0px; 
+            width: 15.5vw;
+            height: 6vw;
+            padding: 0vw;
+            font-size: 2vw;
+        }
+            #undoBox{
+                position: relative;
+                text-align: center;
+                background-color: #2a3950;
+                color: #2a3950;
+                border-radius: .4vw; 
+                border-width: 0px; 
+                width: 5vw;
+                height: 5vw;
+                left: 2vw;
+                top: 1vw;
+                padding: 0vw;
+                font-size: 0vw;
+            }
+                #undoImg{
+                    position: relative;
+                    text-align: center;
+                    border-width: 0px;
+                    width: 4vw;
+                    left: 0vw;
+                    top: .5vw;
+                    padding: 0vw;
+                    font-size: 0vw;
+                }
+            #redoBox{
+                position: relative;
+                text-align: center;
+                background-color: #2a3950;
+                color: #2a3950;
+                border-radius: .4vw; 
+                border-width: 0px; 
+                width: 5vw;
+                height: 5vw;
+                left: 8.5vw;
+                top: -4vw;
+                padding: 0vw;
+                font-size: 0vw;
+            }
+                #redoImg{
+                    position: relative;
+                    text-align: center;
+                    border-width: 0px;
+                    width: 4vw;
+                    left: 0vw;
+                    top: .5vw;
+                    padding: 0vw;
+                    font-size: 0vw;
+                }
+
+    #saveLoadDiv{
+        position: relative;
+        user-select: none;
+        padding: 0vw;
+        width: 0vw;
+        height: 0vw;
+        left: .7vw;
+        top: 60.5vw;
+        white-space: 0vw;
+    }
+        #saveLoad{
+            text-align: center;
+            background-color: #70afce;
+            color: #2a3950;
+            border-radius: .4vw; 
+            border-width: 0px; 
+            width: 15.5vw;
+            height: 13vw;
+            padding: 0vw;
+            font-size: 2vw;
+        }
+            #importBox{
+                overflow-y: scroll; 
+                overflow-x: hidden; 
+                overflow-wrap: anywhere;
+                background-color: #ffffff;
+                user-select: all;
+                position: relative;
+                font-size: 1vw;
+                border-radius: .4vw; 
+                padding: 0vw;
+                width: 14.5vw;
+                height: 4vw;
+                left: .5vw;
+                top: -7.5vw;
+                white-space: 0vw;
+            }
+            #currentBox{
+                overflow-y: scroll; 
+                overflow-wrap: anywhere;
+                background-color: #3a7b99;
+                user-select: all;
+                position: relative;
+                font-size: 1vw;
+                border-radius: .4vw; 
+                padding: 0vw;
+                width: 14.5vw;
+                height: 4vw;
+                left: .5vw;
+                top: -3.5vw;
+                white-space: 0vw;
+            }
+
+            #importButtonBox{
+                background-color: #2a3950;
+                font-size: 0vw;
+                position: relative;
+                border-radius: .4vw; 
+                padding: 0vw;
+                width: 3vw;
+                height: 3vw;
+                left: 6vw;
+                top: -11vw;
+                white-space: 0vw;
+            }
+                #importButton{
+                    position: relative;
+                    rotate: 90deg;
+                    padding: 0vw;
+                    height: 3vw;
+                    left: 0vw;
+                    top: -.1vw;
+                    white-space: 0vw;
+                }
+
+            #loadIconBox{
+                background-color: #ffffff;
+                font-size: 0vw;
+                position: relative;
+                border-radius: .4vw; 
+                padding: 0vw;
+                width: 3vw;
+                height: 4vw;
+                left: 2vw;
+                top: 3.3vw;
+                white-space: 0vw;
+            }
+                #loadIcon{
+                    position: relative;
+                    filter: invert(19%) sepia(20%) saturate(1053%) hue-rotate(176deg) brightness(24%) contrast(91%);
+                    rotate: 180deg;
+                    padding: 0vw;
+                    height: 2.7vw;
+                    left: 0vw;
+                    top: 1.2vw;
+                    white-space: 0vw;
+                }
+            #farmIconBox{
+                background-color: #3a7b99;
+                font-size: 0vw;
+                position: relative;
+                border-radius: .4vw; 
+                padding: 0vw;
+                width: 3vw;
+                height: 4vw;
+                left: 10vw;
+                top: 1.7vw;
+                white-space: 0vw;
+            }
+                #farmIcon{
+                    position: relative;
+                    filter: invert(19%) sepia(20%) saturate(1053%) hue-rotate(176deg) brightness(24%) contrast(91%);
+                    rotate: 180deg;
+                    padding: 0vw;
+                    height: 2.7vw;
+                    left: 0.05vw;
+                    top: 0vw;
+                    white-space: 0vw;
+                }
+
+    #revealDisplayDiv{
+        position: relative;
+        user-select: none;
+        padding: 0vw;
+        width: 0vw;
+        height: 0vw;
+        left: .7vw;
+        top: 53.5vw;
+        white-space: 0vw;
+    }
+        #revealDisplay{
+            text-align: center;
+            background-color: rgb(171, 171, 171);
+            border-radius: .4vw; 
+            border-width: 0px; 
+            width: 15.5vw;
+            height: 5vw;
+            padding: 0vw;
+            font-size: 2vw;
+        }
+            .revealImg{
+                position: relative;
+                padding: 0vw;
+                padding-right: .5vw;
+                padding-left: .5vw;
+                height: 4vw;
+                left: 0vw;
+                top: .5vw;
+                white-space: 0vw;
+            }
+
+    #hoeDisplayDiv{
+        position: relative;
+        padding: 0vw;
+        width: 0vw;
+        height: 0vw;
+        left: 55vw;
+        top: 53vw;
+        white-space: 0vw;
+    }
+        #hoeTool{
+            position: relative;
+            overflow-y: hidden; 
+            overflow-x: hidden;
+            user-select: none;
+            text-align: center;
+            border-radius: .4vw; 
+            background-color: #ddd6bc;
+            border-width: 0px; 
+            width: 6vw;
+            height: 6vw;
+            left: 0vw;
+            top: -4vw;
+            padding: 0px;
+            font-size: 2vw;
+        }
+        #hoeDropDownDiv{
+            background-color: #564e4b;
+            font-size: 0vw;
+            position: relative;
+            border-radius: .4vw; 
+            padding: 0vw;
+            width: 2vw;
+            height: 4vw;
+            left: -1.5vw;
+            top: 2vw;
+            white-space: 0vw;
+        }
+        #hoedropDownImg{
+            position: relative;
+            font-size: 0vw;
+            filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+            rotate: 270deg;
+            padding: 0vw;
+            width: 3vw;
+            left: -.6vw;
+            top: 1.4vw;
+            white-space: 0vw;
+        }
+        .hoeToolImg{
+            position: relative;
+            padding: 0vw;
+            height: 5.3vw;
+            left: 0vw;
+            top: .5vw;
+            white-space: 0vw;
+        }
+        #hoeSelectorDiv{
+            background-color: #ddd6bc;
+            position: relative;
+            border-radius: .4vw; 
+            padding: 0vw;
+            padding-top: .5vw;
+            width: 6vw;
+            height: 38vw;
+            left: -6.2vw;
+            top: -42.5vw;
+            font-size: 0vw;
+            white-space: 0vw;
+        }
+
+    #sickleDisplayDiv{
+        position: relative;
+        user-select: none;
+        padding: 0vw;
+        width: 0vw;
+        height: 0vw;
+        left: 62.5vw;
+        top: 55.5vw;
+        white-space: 0vw;
+    }
+        #sickleDisplay{
+            background-color: #ddd6bc;
+            border-radius: .4vw; 
+            border-width: 0px; 
+            width: 27vw;
+            height: 3.5vw;
+            padding: 0vw;
+            font-size: 2vw;
+        }
+        #sickleDropDownDiv{
+            background-color: #564e4b;
+            position: relative;
+            border-radius: .4vw; 
+            padding: 0vw;
+            width: 4vw;
+            height: 2vw;
+            left: 1vw;
+            top: -6vw;
+            white-space: 0vw;
+        }
+        #sickledropDownImg{
+            position: relative;
+            filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+            padding: 0vw;
+            width: 3vw;
+            left: .5vw;
+            top: -.5vw;
+            white-space: 0vw;
+        }
+        #sickleImgDiv{
+            background-color: #ddd6bc;
+            position: relative;
+            border-radius: .4vw; 
+            padding: 0vw;
+            width: 6vw;
+            height: 8vw;
+            left: -1vw;
+            top: -6.5vw;
+            white-space: 0vw;
+        }
+        #sickleImg{
+            position: relative;
+            padding: 0vw;
+            width: 5.3vw;
+            left: .5vw;
+            top: .5vw;
+            white-space: 0vw;
+        }
+        #sickleYieldDiv{
+            background-color: #564e4b;
+            position: relative;
+            color: #f1ebd5;
+            text-align: center;
+            font-size: 1.47vw;
+            border-radius: .3vw; 
+            padding: 0vw;
+            width: 6vw;
+            height: 1.8vw;
+            left: -1vw;
+            top: -8.3vw;
+            white-space: 0vw;
+        }#sickleYieldImg{
+            position: relative;
+            filter: rgb(255, 251, 188);
+            padding: 0vw;
+            height: 1.47vw;
+            top: .1vw;
+            white-space: 0vw;
+        }
+        #sickleSelectorDiv{
+            background-color: #ddd6bc;
+            position: relative;
+            border-radius: .4vw; 
+            padding: 0vw;
+            padding-top: .5vw;
+            width: 6vw;
+            height: 35.5vw;
+            left: -1vw;
+            top: -52.5vw;
+            white-space: 0vw;
+        }
+
+        #sickleProfitLabel{
+            position: relative;
+            top: -11.2vw;
+            left: 5.9vw;
+            height: 0vw;
+            color: #564e4b;
+            font-size: 2vw;
+        }
+        #sickleProfitScore{
+            position: relative;
+            top: -11.18vw;
+            left: 18.5vw;
+            height: 0vw;
+            color: #564e4b;
+            font-size: 2vw;
+        }
+
+    #orbDisplayDiv{
+        position: relative;
+        user-select: none;
+        padding: 0vw;
+        width: 0vw;
+        height: 0vw;
+        white-space: 0vw;
+        left: 0vw;
+        top: 0vw;
+    }
+        #sickleOrbDiv{
+            background-color: #605776;
+            position: relative;
+            border-radius: .4vw; 
+            padding: 0vw;
+            width: 11vw;
+            height: 2.8vw;
+            left: 3vw;
+            top: .2vw;
+            white-space: 0vw;
+        }
+        #sickleOrb{
+            white-space: 0vw;
+            width: 0vw;
+            height: 0vw;
+        }
+        #sickleOrbImg{
+            position: relative;
+            filter: rgb(255, 251, 188);
+            padding: 0vw;
+            height: 2vw;
+            top: .22vw;
+            white-space: 0vw;
+        }
+        #sickleOrbCount{
+            position: relative;
+            text-align: center;
+            color: #c1afd9;
+            font-size: 2.2vw;
+            padding: 0vw;
+            left: 0vw;
+            top: 0vw;
+            white-space: 0vw;
+        }
+        #sickleOrbUpDiv{
+            background-color: #9c80b0;
+            color: #605776;
+            position: relative;
+            text-align: center;
+            border-radius: .3vw; 
+            padding: 0vw;
+            width: 4vw;
+            height: 4vw;
+            left: 13vw;
+            top: -3vw;
+            white-space: 0vw;
+        }
+        #sickleOrbUp{
+            position: relative;
+            user-select: none;
+            text-align: center;
+            font-size: 3vw;
+            padding: 0vw;
+            left: 0vw;
+            top: 0vw;
+            white-space: 0vw;
+        }
+        #sickleOrbDownDiv{
+            background-color: #9c80b0;
+            color: #605776;
+            position: relative;
+            text-align: center;
+            border-radius: .3vw; 
+            padding: 0vw;
+            width: 4vw;
+            height: 4vw;
+            left: 0vw;
+            top: -6.8vw;
+            white-space: 0vw;
+        }
+        #sickleOrbDown{
+            position: relative;
+            user-select: none;
+            text-align: center;
+            font-size: 4vw;
+            padding: 0vw;
+            left: 0vw;
+            top: -.8vw;
+            white-space: 0vw;
+        }
+
+        #orbPricingDiv{
+            position: relative;
+            left: .5vw;
+            top: 3vw;
+            width: 10vw;
+            height: 0vw;
+            padding: 0px;
+        }
+        #orbPricing{
+            overflow-y: scroll; 
+            overflow-x: hidden; 
+            user-select: none;
+            position: relative;
+            border-radius: .4vw; 
+            background-color: #c1afd9;
+            color: #605776;
+            border-width: 0px; 
+            width: 15vw;
+            height: 20.6vw;
+            padding: .5vw;
+            padding-top: 1vw;
+            font-size: 1.7vw;
+        }
+        
+        #orbAdd{
+            filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+            position: relative;
+            white-space: 0vh;
+            width: 2vw;
+            left: -.3vw;
+            top: -1vw;
+        }
+        #orbImg{
+            position: relative;
+            white-space: 0vh;
+            width: 4vw;
+            left: 0vw;
+            top: 0vw;
+        }
+        #orbCount{
+            font-size: 2.7vw;
+            font-weight: bolder;
+            position: relative;
+            color: white;
+            
+            left: 2.9vw;
+                top: -4.27vw;
+
+        }
+
+    #toggleDisplayDiv{
+        position: relative;
+        user-select: none;
+        padding: 0vw;
+        width: 0vw;
+        height: 0vw;
+        white-space: 0vw;
+        left: 79.5vw;
+        top: 38.5vw;
+    }
+        #toggleDisplay{
+            position: relative;
+            border-radius: .4vw; 
+            left: 0vw;
+            top: 0vw;
+            background-color: rgba(0, 0, 0, 0.528);
+            border-width: 0px; 
+            width: 10vw;
+            height: 6.5vw;
+            padding: 0vw;
+            font-size: 2vw;
+        }
+            #fertToggle{
+                position: relative;
+                left: 1vw;
+                top: 1vw;
+                width: 0vw;
+                height: 0vw;
+            }
+                #fertToggleImg{
+                    position: relative;
+                    width: 4vw;
+                    height: 4vw;
+                }
+                #fertToggleX{
+                    position: relative;
+                    left: 0vw;
+                    top: -4vw;
+                    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+                    rotate: 45deg;
+                    width: 4vw;
+                    height: 4vw;
+                }
+            #strangeToggle{
+                position: relative;
+                left: 4.5vw;
+                top: .2vw;
+                width: 0vw;
+                height: 0vw;
+            }
+                #strangeToggleImg{
+                    position: relative;
+                    width: 5.5vw;
+                    height: 5.5vw;
+                }
+                #strangeToggleX{
+                    position: relative;
+                    left: 1vw;
+                    top: -5vw;
+                    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+                    rotate: 45deg;
+                    width: 4vw;
+                    height: 4vw;
+                }
+
+    #counterDisplayDiv{
+        position: relative;
+        padding: 0vw;
+        width: 0vw;
+        height: 0vw;
+        white-space: 0vw;
+        left: 43.5vw;
+        top: 59.5vw;
+    }
+        #erasePlotDiv{
+            position: relative;
+            padding: 0vw;
+            width: 0vw;
+            height: 0vw;
+            white-space: 0vw;
+            top: 6.8vw;
+            left: -5vw;    
+        }
+            #erasePlot{
+                overflow-y: hidden; 
+                overflow-x: hidden; 
+                position: relative;
+                border-width: .3vw; 
+                padding: .6vw;
+                background-color: #ffd1dc;
+                text-decoration: none;
+    
+                top: 0vw;
+                left: 0vw;
+                width: 6vw;
+                border-radius: .4vw; 
+                height: 3.5vw;
+                font-size: 0vw;
+                white-space: 0vw;
+            }
+                #erasePlotImg{
+                    position: relative;
+                    white-space: 0vw;
+                    padding: 0vw;
+                    left: -.2vw;
+                    top: -.3vw;
+                    width: 4vw;
+                }
+        #rotationSelectorDiv{
+            position: relative;
+            padding: 0vw;
+            width: 0vw;
+            height: 0vw;
+            white-space: 0vw;
+            top: 0vw;
+            left: -5vw;    
+        }
+            #rotationSelector{
+                overflow-y: hidden; 
+                overflow-x: hidden; 
+                position: relative;
+                border-width: .3vw; 
+                padding: .6vw;
+                background-color: #ffd1dc;
+                text-decoration: none;
+    
+                top: 0vw;
+                left: 0vw;
+                width: 6vw;
+                border-radius: .4vw; 
+                height: 3.5vw;
+                font-size: 0vw;
+                white-space: 0vw;
+            }
+                .rotationSelectorImg{
+                    position: relative;
+                    white-space: 0vw;
+                    padding: 0vw;
+                    left: -.2vw;
+                    top: -.3vw;
+                    width: 4vw;
+                }
+                #rotationSelectorOverlay{
+                    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+                    position: relative;
+                    opacity: .5;
+                    white-space: 0vw;
+                    padding: .2vw;
+                    width: 4vw;
+                    top: -4.5vw;
+                    left: -.375vw;
+                }
+        #counterDisplay{
+            position: relative;
+            user-select: none;
+            border-radius: .4vw; 
+            left: 0vw;
+            top: 0w;
+            background-color: #ffd1dc;
+            border-width: 0px; 
+            width: 46vw;
+            height: 16vw;
+            padding: 0px;
+            font-size: 2vw;
+            text-align: center;
+        }
+            .counterDisplayImgDiv{
+                position: relative;
+                background-color: #ff9eb5;
+                border-width: 0px; 
+                width: 4vw;
+                height: 4vw;
+                border-radius: .4vw; 
+            }
+            .cdImg{
+                white-space: 0vh;
+                padding: .2vw;
+                width: 3.5vw;
+            }
+            .counterDisplayNumDiv{
+                position: relative;
+                background-color: #ff6b8e;
+                color: #FFE5EC;
+                font-size: 1.5vw;
+                border-width: 0px; 
+                width: 4vw;
+                height: 2vw;
+                border-radius: .4vw; 
+            }
+            .counterDisplayOrbDiv{
+                position: relative;
+                background-color: #7f2e42;
+                font-size: 1.3vw;
+                border-width: 0px; 
+                width: 4vw;
+                height: 1.8vw;
+                border-radius: .4vw; 
+            }
+
+    #profitDisplayDiv{
+        position: relative;
+        padding: 0vw;
+        width: 0vw;
+        height: 0vw;
+        white-space: 0vw;
+        left: 68vw;
+        top: 44.5vw;
+    }
+        #profitDisplay{
+            position: relative;
+            user-select: none;
+            border-radius: .4vw; 
+            left: 0vw;
+            top: 0vw;
+            background-color: rgb(0, 0, 0);
+            border-width: 0px; 
+            width: 20.5vw;
+            height: 9.5vw;
+            padding: .5vw;
+            white-space: 0vw;
+            line-height: 2.2vw;
+        }
+            #playerProfitlabel{
+                position: relative;
+                top: 0vw;
+                height: 0vw;
+                color: rgb(255, 248, 192);
+                font-size: 1.8vw;
+            }
+            #playerProfitScore{
+                position: relative;
+                top: 0vw;
+                height: 0vw;
+                color: rgb(255, 238, 0);
+                font-size: 1.4vw;
+            }
+            #playerStrangeRatelabel{
+                position: relative;
+                top: 0.5vw;
+                height: 0vw;
+                color: rgb(213, 210, 255);
+                font-size: 1.8vw;
+            }
+            #playerStrangerateScore{
+                position: relative;
+                top: 0.55vw;
+                left: 13vw;
+                height: 0vw;
+                color: rgb(164, 157, 255);
+                font-size: 1.8vw;
+            }
+            #playerCloverTimelabel{
+                position: relative;
+                top: 0.5vw;
+                height: 0vw;
+                color: rgb(172, 230, 172);
+                font-size: 1.8vw;
+            }
+            #playerCloverTimeScore{
+                position: relative;
+                top: 0.55vw;
+                left: 11.8vw;
+                height: 0vw;
+                color: rgb(74, 255, 74);
+                font-size: 1.8vw;
+            } 
+
+    .plot{
+        width: 2vw;
+        height: 2vw;
+        border: 0px;
+        border-color: black; 
+        color: red;
+    }
+    .plotNull{
+        width: 2vw;
+        height: 2vw;
+        border: 0px;
+        background-color: rgb(73, 122, 102);
+    }
+    .plotMainItem{
+        position: absolute;
+        width: 4vw;
+        height: 4vw;
+        border: 0px;
+        border-color: black; 
+        color: red;
+    }
+    .breedDot{
+        filter: invert(25%) sepia(1000%) saturate(10000%) hue-rotate(360deg) brightness(152%) contrast(108%);
+        opacity: .7;
+        position: absolute;
+        margin-left: 1vw;
+        margin-top: 1vw;
+        width: 2vw;
+        padding: 0vw;
+        height: 2vw;
+        font-size: 0vw;
+        border: 0px;
+    }
+    .multiOverlay{
+        filter: invert(25%) sepia(1000%) saturate(5398%) hue-rotate(600deg) brightness(92%) contrast(108%);
+        opacity: .4;
+        position: absolute;
+        width: 4vw;
+        height: 4vw;
+    }
+        #plotRemove{
+            position: absolute;
+            width: 4vw;
+            height: 4vw;
+            margin-left: -3vw;
+            margin-top: -3.7vw;
+        }
+        #plotRotate{
+            position: absolute;
+            width: 4vw;
+            height: 4vw;
+            margin-left: 3vw;
+            margin-top: -3.7vw;
+        }
+        .plotUv{
+            position: absolute;
+            width: 1vw;
+            height: 1vw;
+            margin-left: 2vw;
+            margin-top: 0px;
+        }
+        .plotFert{
+            position: absolute;
+            width: 1vw;
+            height: 1vw;
+            margin-left: 3vw;
+            margin-top: 0px;
+        }
+        .plotWatered{
+            position: absolute;
+            width: 1vw;
+            height: 1vw;
+            margin-left: 3vw;
+            margin-top: 1vw;
+        }
+        .plotStrawberried{
+            position: absolute;
+            width: 1vw;
+            height: 1.5vw;
+            margin-left: 3vw;
+            margin-top: 2vw;
+            font-size: 1.2vw;
+            padding: 0px;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+            background-color: red;
+        }
+
+        .plotBreed1{
+            position: absolute;
+            width: 1vw;
+            height: 1vw;
+            margin-left: 0vw;
+            margin-top: 0vw;
+        }
+        .plotBreed2{
+            position: absolute;
+            width: 1vw;
+            height: 1vw;
+            margin-left: 3vw;
+            margin-top: 0vw;
+        }
+        .plotBreed3{
+            position: absolute;
+            width: 1vw;
+            height: 1vw;
+            margin-left: 3vw;
+            margin-top: 3vw;
+        }
+        .plotBreed4{
+            position: absolute;
+            width: 1vw;
+            height: 1vw;
+            margin-left: 0vw;
+            margin-top: 3vw;
+        }
+
+/*/////////////////////////////////*/
+/*//////ARROWS!!!!!!!!!!!!!////////*/
+/*/////////////////////////////////*/
+    .upMegaGrow{
+        filter: invert(38%) sepia(38%) saturate(4398%) hue-rotate(276deg) brightness(92%) contrast(108%);
+        opacity: .5;
+        position: absolute;
+        rotate: 0deg;
+        width: 4vw;
+        height: 4vw;
+    }
+    .rightMegaGrow{
+        filter: invert(38%) sepia(38%) saturate(4398%) hue-rotate(276deg) brightness(92%) contrast(108%);
+        opacity: .5;
+        position: absolute;
+        rotate: 90deg;
+        width: 4vw;
+        height: 4vw;
+    }
+    .downMegaGrow{
+        filter: invert(38%) sepia(38%) saturate(4398%) hue-rotate(276deg) brightness(92%) contrast(108%);
+        opacity: .5;
+        position: absolute;
+        rotate: 180deg;
+        width: 4vw;
+        height: 4vw;
+    }
+    .leftMegaGrow{
+        filter: invert(38%) sepia(38%) saturate(4398%) hue-rotate(276deg) brightness(92%) contrast(108%);
+        opacity: .5;
+        position: absolute;
+        rotate: 270deg;
+        width: 4vw;
+        height: 4vw;
+    }
+/*/////////////////////////////////*/
+    .upGigaGrow{
+        filter: invert(15%) sepia(36%) saturate(5939%) hue-rotate(278deg) brightness(87%) contrast(107%);
+        opacity: .5;
+        position: absolute;
+        rotate: 0deg;
+        width: 4vw;
+        height: 4vw;
+    }
+    .rightGigaGrow{
+        filter: invert(15%) sepia(36%) saturate(5939%) hue-rotate(278deg) brightness(87%) contrast(107%);
+        opacity: .5;
+        position: absolute;
+        rotate: 90deg;
+        width: 4vw;
+        height: 4vw;
+    }
+    .downGigaGrow{
+        filter: invert(15%) sepia(36%) saturate(5939%) hue-rotate(278deg) brightness(87%) contrast(107%);
+        opacity: .5;
+        position: absolute;
+        rotate: 180deg;
+        width: 4vw;
+        height: 4vw;
+    }
+    .leftGigaGrow{
+        filter: invert(15%) sepia(36%) saturate(5939%) hue-rotate(278deg) brightness(87%) contrast(107%);
+        opacity: .5;
+        position: absolute;
+        rotate: 270deg;
+        width: 4vw;
+        height: 4vw;
+    }
+/*/////////////////////////////////*/
+    /* 
+
+
+ #resetFarmDiv{
+        position: relative;
+        padding: 0vw;
+        width: 0vw;
+        height: 0vw;
+        white-space: 0vw;
+        top: 0w;
+        left: 0vw;    
+    }
+        #resetFarmButton{
+            position: relative;
+            left: 1vw;
+            top: 2vw;
+            background-color: white;
+            border-width: 0px; 
+            width: 14vw;
+            height: 4vw;
+            padding: 0px;
+            font-size: 2vw;
+            text-align: center;
+        }
+
+    #groupA{
+        position: relative;
+        left: 2vw;
+        top: -1vw;
+    }
+    #groupA tr:nth-child(even) td:nth-child(odd){
+        background-color: #b2dfbc;
+    }
+    #groupA tr:nth-child(odd) td:nth-child(even){
+        background-color: #b2dfbc;
+    }
+    #groupA tr:nth-child(even) td:nth-child(even){
+        background-color: #cdffda;
+    }
+    #groupA tr:nth-child(odd) td:nth-child(odd){
+        background-color: #cdffcd;
+    }
+
+    #groupB{
+        position: relative;
+        left: 18.4vw;
+        top: -49vw;
+    }
+    #groupB tr:nth-child(even) td:nth-child(even){
+        background-color: #b2dfbc;
+    }
+    #groupB tr:nth-child(odd) td:nth-child(odd){
+        background-color: #b2dfbc;
+    }
+    #groupB tr:nth-child(odd) td:nth-child(even){
+        background-color: #cdffda;
+    }
+    #groupB tr:nth-child(even) td:nth-child(odd){
+        background-color: #cdffcd;
+    }
+
+    #groupC{
+        position: relative;
+        left: 70.8vw;
+        top: -97vw;
+    }
+    #groupC tr:nth-child(even) td:nth-child(even){
+        background-color: #b2dfbc;
+    }
+    #groupC tr:nth-child(odd) td:nth-child(odd){
+        background-color: #b2dfbc;
+    }
+    #groupC tr:nth-child(odd) td:nth-child(even){
+        background-color: #cdffda;
+    }
+    #groupC tr:nth-child(even) td:nth-child(odd){
+        background-color: #cdffcd;
+    }
+
+    #groupD{
+        position: relative;
+        left: 83.2vw;
+        top: -121vw;
+    }
+    #groupD tr:nth-child(even) td:nth-child(even){
+        background-color: #b2dfbc;
+    }
+    #groupD tr:nth-child(odd) td:nth-child(odd){
+        background-color: #b2dfbc;
+    }
+    #groupD tr:nth-child(odd) td:nth-child(even){
+        background-color: #cdffda;
+    }
+    #groupD tr:nth-child(even) td:nth-child(odd){
+        background-color: #cdffcd;
+    }
+
+    #groupE{
+        position: relative;
+        left: 79.2vw;
+        top: -113vw;
+    }
+    #groupE tr:nth-child(even) td:nth-child(even){
+        background-color: #b2dfbc;
+    }
+    #groupE tr:nth-child(odd) td:nth-child(odd){
+        background-color: #b2dfbc;
+    }
+    #groupE tr:nth-child(odd) td:nth-child(even){
+        background-color: #cdffda;
+    }
+    #groupE tr:nth-child(even) td:nth-child(odd){
+        background-color: #cdffcd;
+    }
+
+    #groupF{
+        position: relative;
+        left: 18.4vw;
+        top: -84.6vw;
+    }
+    #groupF tr:nth-child(even) td:nth-child(even){
+        background-color: #b2dfbc;
+    }
+    #groupF tr:nth-child(odd) td:nth-child(odd){
+        background-color: #b2dfbc;
+    }
+    #groupF tr:nth-child(odd) td:nth-child(even){
+        background-color: #cdffda;
+    }
+    #groupF tr:nth-child(even) td:nth-child(odd){
+        background-color: #cdffcd;
+    } */
+
+
+
+
+
+/*
+    #CloverFarm{
+        background-color: rgb(0, 0, 0);
+        border-style: outset; 
+        border-width: .3vw; 
+        border-color: rgb(246, 255, 0); 
+        border-radius: .4vw; 
+        color: rgb(194, 171, 41);
+        text-decoration: none;
+        padding: .4vw;
+        width: 90vw;
+        height: 74vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+        .gccPlot{
+            width: 2vw;
+            height: 2vw;
+            border: 0px;
+            border-color: black; 
+            color: red;
+        }
+        .gccPlotNull{
+            width: 2vw;
+            height: 2vw;
+            border: 0px;
+            background-color: rgb(0, 0, 0);
+        }
+    ///////////////////////////////////
+    #gccGroupA{
+        position: relative;
+        left: 0vw;
+        top: -1vw;
+    }
+    #gccGroupA tr:nth-child(even) td:nth-child(odd){
+        background-color: #cbbd70;
+    }
+    #gccGroupA tr:nth-child(odd) td:nth-child(even){
+        background-color: #cbbd70;
+    }
+    #gccGroupA tr:nth-child(even) td:nth-child(even){
+        background-color: #feffac;
+    }
+    #gccGroupA tr:nth-child(odd) td:nth-child(odd){
+        background-color: #eee79e;
+    }
+    
+    #gccGroupB{
+        position: relative;
+        left: 16.4vw;
+        top: -53vw;
+    }
+    #gccGroupB tr:nth-child(even) td:nth-child(even){
+        background-color: #cbbd70;
+    }
+    #gccGroupB tr:nth-child(odd) td:nth-child(odd){
+        background-color: #cbbd70;
+    }
+    #gccGroupB tr:nth-child(odd) td:nth-child(even){
+        background-color: #feffac;
+    }
+    #gccGroupB tr:nth-child(even) td:nth-child(odd){
+        background-color: #eee79e;
+    }
+    
+    #gccGroupC{
+        position: relative;
+        left: 70vw;
+        top: -40vw;
+    }
+    #gccGroupC tr:nth-child(even) td:nth-child(even){
+        background-color: #cbbd70;
+    }
+    #gccGroupC tr:nth-child(odd) td:nth-child(odd){
+        background-color: #cbbd70;
+    }
+    #gccGroupC tr:nth-child(odd) td:nth-child(even){
+        background-color: #feffac;
+    }
+    #gccGroupC tr:nth-child(even) td:nth-child(odd){
+        background-color: #eee79e;
+    }
+    
+    #gccGroupD{
+        position: relative;
+        left: 82vw;
+        top: -60vw;
+    }
+    #gccGroupD tr:nth-child(even) td:nth-child(even){
+        background-color: #cbbd70;
+    }
+    #gccGroupD tr:nth-child(odd) td:nth-child(odd){
+        background-color: #cbbd70;
+    }
+    #gccGroupD tr:nth-child(odd) td:nth-child(even){
+        background-color: #feffac;
+    }
+    #gccGroupD tr:nth-child(even) td:nth-child(odd){
+        background-color: #eee79e;
+    }
+    
+    #gccGroupE{
+        position: relative;
+        left: 78vw;
+        top: -55vw;
+    }
+    #gccGroupE tr:nth-child(even) td:nth-child(even){
+        background-color: #cbbd70;
+    }
+    #gccGroupE tr:nth-child(odd) td:nth-child(odd){
+        background-color: #cbbd70;
+    }
+    #gccGroupE tr:nth-child(odd) td:nth-child(even){
+        background-color: #feffac;
+    }
+    #gccGroupE tr:nth-child(even) td:nth-child(odd){
+        background-color: #eee79e;
+    }
+    
+    #gccGroupF{
+        position: relative;
+        left: 18.4vw;
+        top: -72.6vw;
+    }
+    #gccGroupF tr:nth-child(even) td:nth-child(even){
+        background-color: #cbbd70;
+    }
+    #gccGroupF tr:nth-child(odd) td:nth-child(odd){
+        background-color: #cbbd70;
+    }
+    #gccGroupF tr:nth-child(odd) td:nth-child(even){
+        background-color: #feffac;
+    }
+    #gccGroupF tr:nth-child(even) td:nth-child(odd){
+        background-color: #eee79e;
+    }
+
+*/
+
+/*
+
+.farmPlotButton{
+    height: 50px;
+    width: 50px;
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.farmPlotButtonClicked{
+    height: 50px;
+    width: 50px;
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    color: lightblue;
+    background-color: lightblue;
+}
+body{
+    background: linear-gradient(skyblue, lightpink, white, lightpink, skyblue);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgb(230, 226, 176);
+}
+    #plotCounterBox{
+        margin-top: 2px;
+        background-color: rgb(120, 120, 120);
+        border-radius: 4px;
+        width: 90%;
+    }
+        .counterBox{
+            margin-top: 2px;
+            width: 4%;
+            aspect-ratio: 1 / 1;
+            border: 1%;
+            color: white;
+            font-size: 2vw;
+            display: "";
+        }
+            .counterBoximg{
+                margin-top: 2px;
+                width: 90%;
+                aspect-ratio: 1 / 1;
+                border: 1%;
+            }
+
+            #gcc4Leaf{
+                margin-top: 2px;
+                width: 4%;
+                aspect-ratio: 1 / 1;
+                border: 1%;
+                color: white;
+                font-size: 2vw;
+            }
+            #gcc16Leaf{
+                margin-top: 2px;
+                width: 4%;
+                aspect-ratio: 1 / 1;
+                border: 1%;
+                color: white;
+                font-size: 2vw;
+            }
+            #gcc64Leaf{
+                margin-top: 2px;
+                width: 4%;
+                aspect-ratio: 1 / 1;
+                border: 1%;
+                color: white;
+                font-size: 2vw;
+            }
+
+        .counterBox2{
+            margin-top: 2px;
+            width: 4%;
+            aspect-ratio: 1 / 1;
+            border: 1%;
+            color: rgb(144, 255, 153);
+            font-size: 2vw;
+        }
+            .counterBox2img{
+                margin-top: 2px;
+                width: 90%;
+                aspect-ratio: 1 / 1;
+                border: 1%;
+            }
+
+
+    #farmPlotSelect{
+        height: 2vh;
+        font-size: 1.4vh;
+        padding: 0px;
+        border-width: 0px; 
+    }
+    #farmPlotDirectionSelect{
+        height: 2vh;
+        font-size: 1.4vh;
+        padding: 0px;
+        border-width: 0px; 
+    }
+    #farmPlotButton{
+        height: 2vh;
+        font-size: 1.4vh;
+        padding: 0px;
+        border-width: 0px; 
+    }
+
+    .switch {
+            position: relative;
+            display: inline-block;
+            width: 4vw;
+            height: 2vw;
+            bottom: -.2vw;
+        }
+        
+        /* Hide default HTML checkbox 
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        /* The slider 
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 1.4vw;
+            width: 1.4vw;
+            left: .3vw;
+            bottom: .35vw;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+        
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        
+        input:focus + .slider {
+            box-shadow: 0 0 .2vw #2196F3;
+        }
+        
+        input:checked + .slider:before {
+            -webkit-transform: translateX(2vw);
+            -ms-transform: translateX(2vw);
+            transform: translateX(2vw);
+        }
+        
+        /* Rounded sliders 
+        .slider.round {
+            border-radius: 1.9vw;
+        }
+        
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+    
+*/
