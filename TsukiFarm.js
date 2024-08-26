@@ -2,7 +2,7 @@
 //disord @syiv 
 //top ten "id rather do it in js" codes
 let currentWebsiteVersion = "2.0.0";
-let startingFarm = ""
+let startingFarm = " "
 
 let chosenFarmSpot = 12;
 let previousPlot = chosenFarmSpot;
